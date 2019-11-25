@@ -14,7 +14,7 @@ const Home3rd = ({ test }) => {
     void element.offsetWidth
     element.classList.add("fade-in--quick")
   }
-  const dataUse = test.why.edges[1].node.frontmatter.home_why_vn || {}
+  const dataUse = test.why.edges[0].node.frontmatter.home_why_vn || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
   const tabSelect =
     toggleStatus !== 0

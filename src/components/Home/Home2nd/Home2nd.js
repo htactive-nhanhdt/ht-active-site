@@ -6,7 +6,7 @@ import QueueAnim from "rc-queue-anim"
 import TextCenter from "../TextCenter/TextCenter"
 const { Panel } = Collapse
 export default ({ color, test }) => {
-  const dataUse = test.about.edges[1].node.frontmatter.home_about_vn || {}
+  const dataUse = test.about.edges[0].node.frontmatter.home_about_vn || {}
   const dataArr = Object.values(dataUse).map(item => item) || []
   const fontAwesome = [
     "fa fa-gavel customwidth",
