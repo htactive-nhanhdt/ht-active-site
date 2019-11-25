@@ -293,7 +293,7 @@ collections:
     editor:
       preview: false
     fields:
-     - { label: "Tiêu đề", name: "title-vn", widget: "string" }
+     - { label: "Tiêu đề Trang", name: "title-vn", widget: "string" }
      - { label: "Publish Date", name: "date-vn", widget: "datetime" }    
      - name: "banner-services"
        label: "banner-services"
@@ -310,10 +310,10 @@ collections:
     editor:
       preview: false
     fields:
-     - { label: "Tiêu đề", name: "title-vn", widget: "string" }
+     - { label: "Tiêu đề thể loại ", name: "title-category-vn", widget: "string" }
      - { label: "Publish Date", name: "date-vn", widget: "datetime" }    
      - name: "service-category"
-       label: "lOẠI DỊCH VỤ"
+       label: "Loại dịch vụ"
        widget: "object"
        fields:          
           - { label: " Tiêu đề Dịch vụ", name: "banner-title-vn", widget: "string" } 
@@ -327,7 +327,7 @@ collections:
     editor:
        preview: false
     fields:
-      - { label: "Tiêu đề", name: "title-vn", widget: "string" }
+      - { label: "Tiêu đề thẻ ", name: "title-card-vn", widget: "string" }
       - { label: "Publish Date", name: "date-vn", widget: "datetime" }
       - name: "card-services"
         label: "card-services"
