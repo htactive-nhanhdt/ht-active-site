@@ -4566,10 +4566,11 @@ footer:not(.light) .footer-content .tag a,
   margin-top: 27px;
 }
 .header-top-dropdown .dropdown-menu {
-  z-index: 1003;
+  z-index: 2000000000000;
   padding: 20px;
   min-width: 280px;
   margin-top: 0px;
+  display: block!important;
 }
 .header-top-dropdown .search-box .form-group {
   margin-bottom: 0;
