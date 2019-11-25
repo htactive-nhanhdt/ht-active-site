@@ -5,6 +5,6 @@ card-services:
   card-img: /img/game-cocos.jpg
   card-lead: 'Design, develop, publish, advertise mobile game in Cocos game engine.'
   card-title: Game with cocos2d
-  tag-card: web
+  tag-card: game
 ---
 
