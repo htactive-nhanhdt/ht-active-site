@@ -41,17 +41,10 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data-vi`,
-        path: `${__dirname}/src/data/vi`,
+        name: `data`,
+        path: `${__dirname}/src/data`,
       },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data-en`,
-        path: `${__dirname}/src/data/en`,
-      },
-    },
+    },  
     {
       resolve: `gatsby-source-filesystem`,
       options: {
