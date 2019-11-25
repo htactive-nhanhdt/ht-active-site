@@ -291,6 +291,7 @@ collections:
     folder: "src/data/vi/services"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    language: "vi"
     editor:
       preview: false
     fields:
@@ -308,6 +309,7 @@ collections:
     folder: "src/data/vi/services/categories"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    language: "vi"
     editor:
       preview: false
     fields:
@@ -325,6 +327,7 @@ collections:
     folder: "src/data/vi/services/card"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    language: "vi"
     editor:
        preview: false
     fields:
@@ -345,6 +348,7 @@ collections:
     folder: "src/data/en/services"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    language: "en"
     editor:
       preview: false
     fields:
@@ -362,10 +366,11 @@ collections:
     folder: "src/data/en/services/categories"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    language: "en"
     editor:
       preview: false
     fields:
-     - { label: "Category title"" ", name: "title", widget: "string" }
+     - { label: "Category title", name: "title", widget: "string" }
      - { label: "Publish Date", name: "date-vn", widget: "datetime" }    
      - name: "service-category"
        label: "Category title"
@@ -379,6 +384,7 @@ collections:
     folder: "src/data/en/services/card"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    language: "en"
     editor:
        preview: false
     fields:
