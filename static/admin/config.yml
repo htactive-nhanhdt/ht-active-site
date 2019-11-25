@@ -299,7 +299,7 @@ collections:
        label: "banner-services"
        widget: "object"
        fields: 
-      - { label: "Ảnh nền Banner",name: "banner-img-vn",widget: "image"}
-      - { label: " Tiêu đề banner", name: "banner-title-vn", widget: "string" } 
-      - { label: " Lời dẫn banner", name: "banner-lead-vn", widget: "string" }    
+          - { label: "Ảnh nền Banner",name: "banner-img-vn",widget: "image"}
+          - { label: " Tiêu đề banner", name: "banner-title-vn", widget: "string" } 
+          - { label: " Lời dẫn banner", name: "banner-lead-vn", widget: "string" }    
       
