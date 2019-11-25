@@ -288,6 +288,7 @@ collections:
   - name: "services-vn"
     label: "Services- Tiếng Việt"
     folder: "src/data/vi/services"
+    identifier_field: "dich vu"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
@@ -305,6 +306,7 @@ collections:
   - name: "service-categories-vn"
     label: "Services-Thể loại- Tiếng Việt"
     folder: "src/data/vi/services"
+    identifier_field: "the loai dich vu"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
@@ -322,6 +324,7 @@ collections:
   - name: "services-card-vn"
     label: "Services-Thẻ- Tiếng Việt"
     folder: "src/data/vi/services"
+    identifier_field: "thẻ"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
