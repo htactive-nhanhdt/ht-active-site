@@ -287,14 +287,13 @@ collections:
 #Services page
   - name: "banner-service-vn"
     label: "Services- Tiếng Việt"
-    folder: "src/data/vi/services"
-    identifier_field: name
+    folder: "src/data/vi/services"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
-     - { label: "Tiêu đề Trang", name: "title-vn", widget: "string" }
+     - { label: "Tiêu đề Trang", name: "title", widget: "string" }
      - { label: "Publish Date", name: "date-vn", widget: "datetime" }    
      - name: "banner-services"
        label: "banner-services"
@@ -305,14 +304,13 @@ collections:
           - { label: " Lời dẫn banner", name: "banner-lead-vn", widget: "string" }    
   - name: "service-categories-vn"
     label: "Services-Thể loại- Tiếng Việt"
-    folder: "src/data/vi/services"
-    identifier_field: name
+    folder: "src/data/vi/services"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
-     - { label: "Tiêu đề thể loại ", name: "title-category-vn", widget: "string" }
+     - { label: "Tiêu đề thể loại ", name: "title", widget: "string" }
      - { label: "Publish Date", name: "date-vn", widget: "datetime" }    
      - name: "service-category"
        label: "Loại dịch vụ"
@@ -324,13 +322,12 @@ collections:
   - name: "services-card-vn"
     label: "Services-Thẻ- Tiếng Việt"
     folder: "src/data/vi/services"
-    identifier_field: name
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
        preview: false
     fields:
-      - { label: "Tiêu đề thẻ ", name: "title-card-vn", widget: "string" }
+      - { label: "Tiêu đề thẻ ", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date-vn", widget: "datetime" }
       - name: "card-services"
         label: "card-services"
