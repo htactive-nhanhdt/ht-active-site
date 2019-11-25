@@ -284,3 +284,38 @@ collections:
               - { label: "Title",name: "tab-title",widget: "string"}  
               - { label: "Description",name: "tab-desc",widget: "string"}  
               - { label: "Image",name: "tab-img",widget: "image"}  
+#Services page
+  - name: "services-vn"
+    label: "Services- Tiếng Việt"
+    folder: "src/data/vi/services"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+    preview: false
+    fields:
+      - { label: "Tiêu đề", name: "title-vn", widget: "string" }
+      - { label: "Publish Date", name: "date-vn", widget: "datetime" }      
+      - name: "banner-vn"
+        label: "Banner"
+        widget: "object"
+        fields:
+          - { label: "Ảnh nền Banner",name: "banner-img-vn",widget: "image"}
+          - { label: " Tiêu đề banner", name: "banner-title-vn", widget: "string" } 
+          - { label: " Lời dẫn banner", name: "banner-lead-vn", widget: "string" }         
+    
+      - name: "services-1st-vn"
+        label: "Service-- Nội dung 1"
+        widget: "object"
+        fields:
+          - {label: "Tiêu đề",name: "service-1st-title-vn",widget: "string"}         
+          - name: "list-card-1"
+            label: "list-card 1 "
+            widget: "object"
+            fields:     
+              - name: "Card"    
+                label: "card"      
+                widget: "object"
+                fields:
+                  - { label: "Ảnh của card",name: "img-card",widget: "image"}
+                  - { label: "Tiêu đề",name: "title-vn",widget: "string"}
+                  - { label: "Miêu tả",name: "lead-vn",widget: "string"}
