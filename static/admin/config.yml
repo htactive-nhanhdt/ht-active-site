@@ -295,6 +295,11 @@ collections:
     fields:
      - { label: "Tiêu đề", name: "title-vn", widget: "string" }
      - { label: "Publish Date", name: "date-vn", widget: "datetime" }
+     - label: "Thể loại", 
+       name: "categories", 
+       widget: "list"
+       allow-add: true
+       default: ["về mảng web", "về mảng game","về mảng ứng dụng di động"]
      - name: "banner-services"
        label: "banner-services"
        widget: "object"
@@ -303,19 +308,19 @@ collections:
           - { label: " Tiêu đề banner", name: "banner-title-vn", widget: "string" } 
           - { label: " Lời dẫn banner", name: "banner-lead-vn", widget: "string" }    
    - name: "services-card-vn"
-    label: "Services-card- Tiếng Việt"
-    folder: "src/data/vi/services"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
-    fields:
-     - { label: "Tiêu đề", name: "title-vn", widget: "string" }
-     - { label: "Publish Date", name: "date-vn", widget: "datetime" }
-     - name: "card-services"
-       label: "card-services"
-       widget: "object"
-       fields: 
+     label: "Services-card- Tiếng Việt"
+     folder: "src/data/vi/services"
+     create: true
+     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+     editor:
+       preview: false
+     fields:
+      - { label: "Tiêu đề", name: "title-vn", widget: "string" }
+      - { label: "Publish Date", name: "date-vn", widget: "datetime" }
+      - name: "card-services"
+        label: "card-services"
+        widget: "object"
+        fields: 
           - { label: "Ảnh của card",name: "card-img-vn",widget: "image"}
           - { label: " Tiêu đề Card", name: "card-title-vn", widget: "string" } 
           - { label: "Mô tả card", name: "card-lead-vn", widget: "string" }    
