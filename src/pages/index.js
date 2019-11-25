@@ -20,9 +20,9 @@ const IndexPage = ({ data, color, footer }) => {
       <Banner></Banner>
       <PageTop />
       <Services color={color} />
-      <Home2nd test={data} color={color} />
+      {/* <Home2nd test={data} color={color} />
       <BannerHome />
-      <Home3rd test={data} />
+      <Home3rd test={data} /> */}
       <FooterTop />
     </Layout>
   )
