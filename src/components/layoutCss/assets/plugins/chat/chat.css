@@ -1,0 +1,201 @@
+div.chat-dialog{
+    position:fixed;
+    width: 80%;
+    max-width: 400px;
+    height:455px;
+    bottom:5px;
+    right:60px;
+    z-index:999;
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,.5);
+    display:flex;
+    flex-direction: column;
+}
+
+div.chat-dialog .chat-with-us{
+  display:none;
+  margin:0px;
+}
+div.chat-dialog.closed .chat-with-us{
+    display: block;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+div.chat-dialog.closed{
+  height: 50px;
+  max-width: 160px;
+}
+
+div.chat-dialog.closed .chat-dialog-header, div.chat-dialog.closed .chat-container{
+  display: none;
+}
+
+div.chat-dialog .chat-container {
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+ div.chat-dialog .chat-contents {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding:0px;
+    height: 100%;
+  }
+ div.chat-dialog .chat-message {
+  margin-top: 10px;
+  padding-top: 10px;
+  }
+ div.chat-dialog .chat-typing {
+      margin-top:0px;
+  }
+div.chat-dialog .chat-message:not(:first-child) {
+  border-top: 1px solid #e7e7e7;
+}
+div.chat-dialog .chat-message-details {
+  margin-left: 10px;
+}
+div.chat-dialog .chat-profile-image {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+}
+
+div.chat-dialog .col-md-1,div.chat-dialog .col-md-11{
+    padding:0;
+}
+div.chat-dialog .panel{
+    margin-bottom: 0px;
+}
+div.chat-dialog .chat-window{
+    bottom:0;
+    position:fixed;
+    float:right;
+    margin-left:10px;
+}
+div.chat-dialog .chat-window > div > .panel{
+    border-radius: 5px 5px 0 0;
+}
+div.chat-dialog .icon_minim{
+    padding:2px 10px;
+}
+div.chat-dialog .msg_container_base{
+  background: #e5e5e5;
+  margin: 0;
+  padding: 0 10px 10px;
+  max-height: 325px;
+  min-height: 325px;
+  overflow-x:hidden;
+}
+div.chat-dialog .top-bar {
+  background: #666;
+  color: white;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+div.chat-dialog .msg_receive{
+    padding-left:0;
+    margin-left:0;
+}
+div.chat-dialog .msg_sent{
+    padding-bottom:20px !important;
+    margin-right:0;
+}
+div.chat-dialog .messages {
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  max-width:100%;
+}
+div.chat-dialog .messages > p {
+    font-size: 13px;
+    margin: 0 0 0.2rem 0;
+  }
+div.chat-dialog .messages > time {
+    font-size: 11px;
+    color: #ccc;
+}
+div.chat-dialog .msg_container {
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+}
+div.chat-dialog img {
+    display: block;
+    width: 100%;
+}
+div.chat-dialog .avatar {
+    position: relative;
+}
+div.chat-dialog .base_receive > .avatar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid #FFF;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+div.chat-dialog .base_sent {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+div.chat-dialog .base_sent > .avatar:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid white;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    box-shadow: 1px 1px 2px rgba(black, 0.2);
+}
+
+div.chat-dialog .msg_sent > time{
+    float: right;
+}
+
+div.chat-dialog #btn-chat{
+    margin-top: 0px;
+    padding: 10.5px 12px;
+    border-radius: 3px;
+}
+
+div.chat-dialog .msg_container_base::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+div.chat-dialog .msg_container_base::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+div.chat-dialog .msg_container_base::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+div.chat-dialog .btn-group.dropup{
+    position:fixed;
+    left:0px;
+    bottom:0;
+}
+div.chat-dialog .panel-footer{
+  margin-top:0px;
+}

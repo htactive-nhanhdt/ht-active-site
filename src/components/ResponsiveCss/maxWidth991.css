@@ -1,0 +1,54 @@
+@media (max-width: 1022px) {
+  .logo-fixed{
+      display:none!important;
+    }
+  
+}
+@media (max-width: 991px) {
+    .logo img,
+    .header-small .logo img {
+      margin: 0 auto;
+    }
+    .site-slogan {
+      text-align: center;
+    }
+    .full-text-container {
+        top: 0;
+        height: 100%;
+        padding: 0 20px;
+      }
+      .full-text-container h1 {
+        font-size: 28px;
+      }
+      .caption {
+        width: 90%;
+        bottom: 40px;
+        left: 40px;
+      }
+      .banner-anim .col-sm-10 {
+        width: auto!important;
+    }
+  
+    .portfolio-item.vertical-divider-left,
+    .side.vertical-divider-left {
+      border-left: none;
+      padding-left: 0px;
+      margin-left: 0px;
+    }
+    .portfolio-item.vertical-divider-right,
+    .side.vertical-divider-right {
+      border-right: none;
+      padding-right: 0px;
+      margin-right: 0px;
+    }
+    .header-fixed {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-fixed .col-md-3 {
+      margin: 0 auto;
+    }
+    .header-fixed .col-md-9 {
+      max-width: 100% !important;
+    }
+  }

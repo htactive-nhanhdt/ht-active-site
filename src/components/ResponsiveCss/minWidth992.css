@@ -1,0 +1,165 @@
+@media (min-width: 992px) {
+  .title {
+    margin-top: 0;
+  }
+  .service-card .title {
+    height: 70px;
+    min-height: 40px;
+  }
+  .header-fixed {
+    display: flex;
+    flex-direction: row !important;
+  }
+  
+  .header-fixed .col-md-9 {
+    max-width: 75% !important;
+  }
+  .banner-anim {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 450px;
+    height: auto;
+  }
+  .banner-left-heading {
+    margin-top: 5%;
+  }
+  .banner-title {
+    padding: 5px;
+  }
+  .banner-left-heading ul {
+    padding-left: 0 !important;
+    margin-top: 3em;
+  }
+  .banner-left-heading ul li {
+    margin-top: 1em;
+  }
+  .banner-left-heading ul li .right-text {
+    line-height: 33px;
+    font-size: 1em;
+    padding: 0.4em;
+  }
+  .icon-check {
+    transition: all 0s ease 0s;
+    line-height: 33px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-size: 22px;
+    padding: 3px 7px 0 7px;
+  }
+
+  .banner-left-wrapper {
+    position: absolute !important;
+    top: 12px;
+    left: 8%;
+  }
+  .banner-left-heading {
+    position: absolute;
+  }
+  .banner-left-heading ul {
+    padding-left: 0 !important;
+    margin-top: 3em;
+  }
+  .banner-left-heading ul li {
+    margin-top: 0.7em;
+    display: flex;
+  }
+  .banner-left-heading ul li .right-text {
+    line-height: 33px;
+    font-size: 22px;
+    padding: 4px 5px 6px 5px;
+  }
+  .macImg {
+    width: 350px;
+    height: auto;
+    position: absolute !important;
+    right: 17% !important;
+    top: 40px !important;
+  }
+
+  .fixed-header-on .header .logo {
+    display: block;
+  }
+  
+  .margin-top-clear {
+    margin-top: 0 !important;
+  }
+  .margin-bottom-clear {
+    margin-bottom: 0 !important;
+  }
+  #affix.affix {
+    position: fixed;
+    top: 65px;
+    width: 80px;
+  }
+  #affix.affix-bottom {
+    position: absolute;
+    width: 80px;
+  }
+  .col-md-4 .sidebar.affix,
+  .col-md-4 .sidebar.affix-bottom {
+    width: 293px;
+  }
+  .col-md-3 .sidebar.affix,
+  .col-md-3 .sidebar.affix-bottom {
+    width: 213px;
+  }
+  .sidebar.affix {
+    position: fixed;
+    top: 20px;
+  }
+  .fixed-header-on .sidebar.affix {
+    top: 65px;
+  }
+  .sidebar.affix-bottom {
+    position: absolute;
+  }
+  .sidebar.affix-bottom .affix-menu,
+  .sidebar.affix .affix-menu {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .affix-menu {
+    padding-top: 20px;
+  }
+  h3.title ~ .affix-menu {
+    padding-top: 0px;
+  }
+
+  .portfolio-item.side {
+    margin-top: 125px;
+  }
+  .col-md-3 + .col-md-9 .mega-menu .dropdown-menu {
+    left: -243px;
+    width: 940px;
+  }
+  .subfooter {
+    text-align: left;
+  }
+  .subfooter .navbar-nav {
+    float: right;
+    margin: 0;
+    text-align: left;
+  }
+  .subfooter .navbar-nav > li {
+    float: left;
+    padding: 0;
+    margin-top: 4px;
+  }
+  .subfooter .navbar-default .nav > li > a {
+    border-right: 1px solid #333333;
+  }
+  .light .subfooter .navbar-default .nav > li > a {
+    border-right: 1px solid #999999;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .masonry-grid .blogpost footer {
+    font-size: 12px;
+  }
+  .navbar-default .navbar-nav > li > a {
+    padding-right: 19px;
+  }
+}

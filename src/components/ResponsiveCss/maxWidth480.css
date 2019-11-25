@@ -1,0 +1,127 @@
+@media (max-width: 480px) {
+  .call-to-action .btn {
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+  }
+  .filters .nav-pills > li {
+    display: inline-block;
+    width: 100%;
+  }
+  .countdown-period {
+    font-size: 14px;
+  }
+  .cart.table > thead > tr > th,
+  .cart.table > tbody > tr > th,
+  .cart.table > tfoot > tr > th,
+  .cart.table > thead > tr > td,
+  .cart.table > tbody > tr > td,
+  .cart.table > tfoot > tr > td {
+    padding: 8px 7px;
+  }
+  .banner-anim {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 180px;
+    height: auto;
+  }
+  .navbar-toggle {
+    position: absolute;
+    top: 0;
+    right: 2px;
+  }
+  .macImg {
+    position: absolute !important;
+    right: 20px;
+    width: 35%;
+    top: 15%;
+    height: auto;
+  }
+  .banner-left-wrapper {
+    position: absolute !important;
+    top: 20px;
+    left: 10px;
+  }
+  .banner-left-heading .banner-title {
+    font-size: 12px!important;
+    margin-left: 0 !important;
+    line-height: 20px!important;
+    padding-left: 2px 3px;
+  }
+  .banner-left-heading ul {
+    padding-left: 0 !important;
+    margin-top: 1em;
+  }
+  .banner-left-heading ul li {
+    margin-top: 5px;
+  }
+  .banner-left-heading ul li .right-text {
+      transition: all 0s ease 0s;
+    min-height: 0px;
+    min-width: 0px;
+    line-height: 12px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 1px 4px;
+    letter-spacing: 0px;
+    font-size: 8px;
+  }
+  .icon-check {
+    transition: all 0s ease 0s;
+    min-height: 0px;
+    min-width: 0px;
+    line-height: 12px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 1px 4px;
+    letter-spacing: 0px;
+    font-size: 8px;
+
+    visibility: visible;
+  }
+  .nav-tabs {
+    background-color: #999999;
+  }
+  .nav-tabs > li {
+    float: none;
+  }
+  .nav-tabs > li a {
+    color: #ffffff;
+    margin-right: 0;
+    border-bottom: 1px solid #8f8f8f;
+  }
+  .nav-tabs > li > a:hover {
+    color: #666666;
+  }
+  .nav-tabs > li > a:hover:after {
+    width: 3px;
+    content: "";
+    background-color: #e84c3d;
+    height: 102%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .header-top-dropdown .btn-group {
+    position: static;
+  }
+  .header-top-dropdown .dropdown-menu {
+    right: 15px !important;
+    width: 100%;
+  }
+  .full-text-container p:not(.lead) {
+    display: none;
+  }
+  .testimonial-image {
+    max-width: 80px;
+  }
+  .testimonial-image + .testimonial-body {
+    padding: 0 15px;
+    margin-left: 100px;
+  }
+  .tparrows,
+  .tp-bullets {
+    display: none;
+  }
+}
