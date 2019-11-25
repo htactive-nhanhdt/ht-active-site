@@ -304,7 +304,7 @@ collections:
           - { label: " Lời dẫn banner", name: "banner-lead-vn", widget: "string" }    
   - name: "service-categories-vn"
     label: "Services-Thể loại- Tiếng Việt"
-    folder: "src/data/vi/services"    
+    folder: "src/data/vi/services/categories"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
@@ -321,7 +321,7 @@ collections:
                   
   - name: "services-card-vn"
     label: "Services-Thẻ- Tiếng Việt"
-    folder: "src/data/vi/services"
+    folder: "src/data/vi/services/card"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
