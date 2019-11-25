@@ -336,6 +336,6 @@ collections:
           - { label: "Ảnh của card",name: "card-img-vn",widget: "image"}
           - { label: " Tiêu đề Card", name: "card-title-vn", widget: "string" } 
           - { label: "Mô tả card", name: "card-lead-vn", widget: "string" }    
-          - { label: "Thể loại card", name: "card-lead-vn", widget: "string" } 
+          - { label: "Thể loại card", name: "tag-card", widget: "string" } 
       
       
