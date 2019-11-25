@@ -296,14 +296,14 @@ collections:
       preview: false
     fields:
      - { label: "Tiêu đề Trang", name: "title", widget: "string" }
-     - { label: "Publish Date", name: "date-vn", widget: "datetime" }    
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
      - name: "banner-services"
        label: "banner-services"
        widget: "object"
        fields: 
-          - { label: "Ảnh nền Banner",name: "banner-img-vn",widget: "image"}
-          - { label: " Tiêu đề banner", name: "banner-title-vn", widget: "string" } 
-          - { label: " Lời dẫn banner", name: "banner-lead-vn", widget: "string" }    
+          - { label: "Ảnh nền Banner",name: "banner-img",widget: "image"}
+          - { label: " Tiêu đề banner", name: "banner-title", widget: "string" } 
+          - { label: " Lời dẫn banner", name: "banner-lead", widget: "string" }    
   - name: "service-categories-vn"
     label: "Services-Thể loại- Tiếng Việt"
     folder: "src/data/vi/services/categories"    
@@ -319,8 +319,8 @@ collections:
        label: "Loại dịch vụ"
        widget: "object"
        fields:          
-          - { label: " Tiêu đề Dịch vụ", name: "category-title-vn", widget: "string" } 
-          - { label: " Lời dẫn Dịch vụ", name: "category-lead-vn", widget: "string" }    
+          - { label: " Tiêu đề Dịch vụ", name: "category-title", widget: "string" } 
+          - { label: " Lời dẫn Dịch vụ", name: "category-lead", widget: "string" }    
                   
   - name: "services-card-vn"
     label: "Services-Thẻ- Tiếng Việt"
@@ -332,14 +332,14 @@ collections:
        preview: false
     fields:
       - { label: "Tiêu đề thẻ ", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date-vn", widget: "datetime" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
       - name: "card-services"
         label: "card-services"
         widget: "object"
         fields: 
-          - { label: "Ảnh của card",name: "card-img-vn",widget: "image"}
-          - { label: " Tiêu đề Card", name: "card-title-vn", widget: "string" } 
-          - { label: "Mô tả card", name: "card-lead-vn", widget: "string" }    
+          - { label: "Ảnh của card",name: "card-img",widget: "image"}
+          - { label: " Tiêu đề Card", name: "card-title", widget: "string" } 
+          - { label: "Mô tả card", name: "card-lead", widget: "string" }    
           - { label: "Thể loại card", name: "tag-card", widget: "string" } 
       
 # Services page in English
@@ -353,7 +353,7 @@ collections:
       preview: false
     fields:
      - { label: "Page Title", name: "title", widget: "string" }
-     - { label: "Publish Date", name: "date-vn", widget: "datetime" }    
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
      - name: "banner-services"
        label: "banner-services"
        widget: "object"
@@ -371,13 +371,13 @@ collections:
       preview: false
     fields:
      - { label: "Category title", name: "title", widget: "string" }
-     - { label: "Publish Date", name: "date-vn", widget: "datetime" }    
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
      - name: "service-category"
        label: "Category title"
        widget: "object"
        fields:          
           - { label: "Category title", name: "category-title", widget: "string" } 
-          - { label: "Category lead", name: "category-lead-vn", widget: "string" }    
+          - { label: "Category lead", name: "category-lead", widget: "string" }    
                   
   - name: "services-card"
     label: "Services-Card"
