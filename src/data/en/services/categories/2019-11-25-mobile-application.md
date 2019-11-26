@@ -1,8 +1,10 @@
 ---
+language: en
 title: MOBILE APPLICATION
-date-vn: 2019-11-25T14:57:35.013Z
+date: 2019-11-26T03:37:26.212Z
 service-category:
-  category-lead-vn: '1'
+  category-lead: '1'
   category-title: MOBILE APPLICATION
+  language: en
 ---
 
