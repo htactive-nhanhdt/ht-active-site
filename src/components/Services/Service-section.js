@@ -1,5 +1,6 @@
 import React from "react"
 import Card from "./Card"
+import { graphql, useStaticQuery } from "gatsby"
 
 const ServiceSection = ({ language, title, lead }) => {
   const data = useStaticQuery(graphql`
@@ -27,7 +28,7 @@ const ServiceSection = ({ language, title, lead }) => {
   const rawData = dataFromQuery.filter(
     item => item.node.frontmatter.card_services.language === keyword  )  
   const listCardData = rawData.map(item => item.node.frontmatter.card_services)
-  const filterTagData= listCardData.filter(item=> item.tag===tag)
+  const filterTagData= listCardData.filter(item=> item.tag_card==="web")
   return (
     <div className="main col-md-12">
       <h1 className="page-title">{title}</h1>
@@ -39,7 +40,7 @@ const ServiceSection = ({ language, title, lead }) => {
           position: "relative",
         }}
       >
-        {listCardData.map(item => (
+        {filterTagData.map(item => (
           <Card
             key={item.title}
             image={item.image}

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import ServiceSection from "./Service-section"
-import { lang } from "C:/Users/Admin/AppData/Local/Microsoft/TypeScript/3.6/node_modules/moment/moment"
+
 
 const WebApp = ({ language }) => {
   const data = useStaticQuery(graphql`
