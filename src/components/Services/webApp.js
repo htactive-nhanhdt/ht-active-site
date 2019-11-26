@@ -17,6 +17,7 @@ const WebApp = ({ language }) => {
                 category_title
                 language
                 tag_name
+                id
               }
             }
           }
@@ -29,7 +30,7 @@ const WebApp = ({ language }) => {
   const rawData = dataFromQuery.filter(
     item => item.node.frontmatter.service_category.language === keyword
   )
-  const categories = rawData.map(item => item.node.frontmatter.service_category)
+  const categories = rawData.map(item => item.node.frontmatter.service_category).sort((a,b)=>a.id-b.id)
   return (
     <section className="main-container" style={{ marginTop: "0px" }}>
       <div className="container">
@@ -38,7 +39,7 @@ const WebApp = ({ language }) => {
             <ServiceSection
               key={index}
               title={item.category_title}
-              lead={item.category_lead !== "1" ? item.category_lead : ""}
+              lead={item.category_lead !== "empty" ? item.category_lead : ""}
               language={language}
               tag_name={item.tag_name}
             />
