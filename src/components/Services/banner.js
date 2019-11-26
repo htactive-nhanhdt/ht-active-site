@@ -1,12 +1,8 @@
-import React, {useContext} from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-
-
-
-
 const Banner = ({language}) => { 
-  // const value= useContext(LanguageContext);
+
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(filter: { fields: { slug: { regex: "/banner/"} } }) {
@@ -23,7 +19,7 @@ const Banner = ({language}) => {
       }
     }
   `)
-  const bannerData = 
+  const bannerData =
     data.allMarkdownRemark.edges[0].node.frontmatter.banner_services
   return (
     <div

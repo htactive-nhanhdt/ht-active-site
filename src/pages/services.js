@@ -10,7 +10,11 @@ import WebApp from "../components/Services/webApp"
 
 export const query = graphql`
   {
-    allMarkdownRemark(filter: {frontmatter: {banner_services: {banner_img: {regex: "/img/"}}}}) {
+    allMarkdownRemark(
+      filter: {
+        frontmatter: { banner_services: { banner_img: { regex: "/img/" } } }
+      }
+    ) {
       edges {
         node {
           frontmatter {
@@ -21,13 +25,18 @@ export const query = graphql`
         }
       }
     }
-  }  
+  }
 `
-
 const Services = ({ data, language }) => (
   <Layout>
     <SEO title="Services" />
-    <Parallax bgImage={data.allMarkdownRemark.edges[0].node.frontmatter.banner_services.banner_img} strength={500}>
+    <Parallax
+      bgImage={
+        data.allMarkdownRemark.edges[0].node.frontmatter.banner_services
+          .banner_img
+      }
+      strength={500}
+    >
       <div style={{ height: 400 }}>
         <Banner language={language} />
       </div>
