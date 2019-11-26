@@ -1,8 +1,10 @@
 ---
+language: en
 title: MOBILE GAME
-date-vn: 2019-11-25T14:57:09.883Z
+date: 2019-11-26T03:38:29.898Z
 service-category:
-  category-lead-vn: '1'
+  category-lead: '1'
   category-title: MOBILE GAME
+  language: en
 ---
 
