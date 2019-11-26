@@ -41,7 +41,6 @@ const Services = ({ data, language }) => (
         <Banner language={language} />
       </div>
     </Parallax>
-
     <WebApp language={language} />
   </Layout>
 )

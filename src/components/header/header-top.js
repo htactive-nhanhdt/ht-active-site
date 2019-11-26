@@ -135,7 +135,7 @@ const HeaderTop = ({language, changeActive}) => {
                           setOpenDropdown(false)
                         }}
                       >
-                        <Link className="btn-link" href="/">
+                        <Link className="btn-link" to="/">
                           English
                         </Link>
                       </li>
@@ -145,7 +145,7 @@ const HeaderTop = ({language, changeActive}) => {
                           setOpenDropdown(false)
                         }}
                       >
-                        <Link className="btn-link" href="/">
+                        <Link className="btn-link" to="/">
                           Tiếng Việt
                         </Link>
                       </li>

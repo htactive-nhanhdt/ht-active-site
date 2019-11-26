@@ -320,7 +320,8 @@ collections:
        widget: "object"
        fields:          
           - { label: " Tiêu đề Dịch vụ", name: "category-title", widget: "string" } 
-          - { label: " Lời dẫn Dịch vụ", name: "category-lead", widget: "string" }    
+          - { label: " Lời dẫn Dịch vụ", name: "category-lead", widget: "string" }   
+          - { label: " Tên đuôi", name: "tag-name", widget: "string" }   
                   
   - name: "services-card-vn"
     label: "Services-Thẻ- Tiếng Việt"
@@ -380,7 +381,8 @@ collections:
        fields:          
           - { label: "language", name: "language", widget: "string", default: "en" }    
           - { label: "Category title", name: "category-title", widget: "string" } 
-          - { label: "Category lead", name: "category-lead", widget: "string" }    
+          - { label: "Category lead", name: "category-lead", widget: "string" }  
+          - { label: "Tag name", name: "tag-name", widget: "string" }    
                   
   - name: "services-card"
     label: "Services-Card"

@@ -1,43 +1,50 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import ServiceSection from "./Service-section"
+import { lang } from "C:/Users/Admin/AppData/Local/Microsoft/TypeScript/3.6/node_modules/moment/moment"
 
-import {graphql, useStaticQuery} from "gatsby"
-import { connect } from "react-redux";
-
-
-
-const WebApp = () => {
+const WebApp = ({ language }) => {
   const data = useStaticQuery(graphql`
-  {
-    allMarkdownRemark(filter: {fields: {slug: {regex: "/en/services/card/"}}}) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            card_services {
-              card_img
-              card_lead
-              tag_card
+    {
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/categories/" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              service_category {
+                category_lead
+                category_title
+                language
+              }
             }
           }
         }
       }
     }
-  }
   `)
+  const dataFromQuery = data.allMarkdownRemark.edges
+  const keyword = language === "vi" ? null : language
+  const rawData = dataFromQuery.filter(
+    item => item.node.frontmatter.service_category.language === keyword
+  )
+  const categories = rawData.map(item => item.node.frontmatter.service_category)
   return (
     <section className="main-container" style={{ marginTop: "0px" }}>
       <div className="container">
         <div className="row">
-        {console.log(data)}
+          {categories.map((item, index) => (
+            <ServiceSection
+              key={index}
+              title={item.category_title}
+              lead={item.category_lead !== "1" ? item.category_lead : ""}
+              language={language}
+            />
+          ))}
         </div>
       </div>
     </section>
   )
 }
-const mapStateToProps = ({ language }) => {
-  return { language }
-}
 
-export default connect(mapStateToProps)(WebApp)
+export default WebApp
