@@ -291,7 +291,6 @@ collections:
     folder: "src/data/vi/services/banner"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    language: "vi"
     editor:
       preview: false
     fields:
@@ -308,8 +307,7 @@ collections:
     label: "Services-Thể loại- Tiếng Việt"
     folder: "src/data/vi/services/categories"    
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    language: "vi"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  
     editor:
       preview: false
     fields:
@@ -319,6 +317,7 @@ collections:
        label: "Loại dịch vụ"
        widget: "object"
        fields:          
+          - { label: "ID", name: "id", widget: "number" } 
           - { label: " Tiêu đề Dịch vụ", name: "category-title", widget: "string" } 
           - { label: " Lời dẫn Dịch vụ", name: "category-lead", widget: "string" }   
           - { label: " Tên đuôi", name: "tag-name", widget: "string" }   
@@ -327,8 +326,7 @@ collections:
     label: "Services-Thẻ- Tiếng Việt"
     folder: "src/data/vi/services/card"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    language: "vi"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"   
     editor:
        preview: false
     fields:
@@ -349,7 +347,6 @@ collections:
     folder: "src/data/en/services/banner"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    language: "en"
     editor:
       preview: false
     fields:
@@ -368,7 +365,6 @@ collections:
     folder: "src/data/en/services/categories"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    language: "en"
     editor:
       preview: false
     fields:
@@ -378,7 +374,8 @@ collections:
      - name: "service-category"
        label: "Category title"
        widget: "object"
-       fields:          
+       fields:    
+          - { label: "id", name: "id", widget: "number" }        
           - { label: "language", name: "language", widget: "string", default: "en" }    
           - { label: "Category title", name: "category-title", widget: "string" } 
           - { label: "Category lead", name: "category-lead", widget: "string" }  
@@ -389,7 +386,6 @@ collections:
     folder: "src/data/en/services/card"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    language: "en"
     editor:
        preview: false
     fields:

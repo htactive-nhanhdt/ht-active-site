@@ -9,6 +9,6 @@ card-services:
     ReactNative, NativeScript ...
   card-title: Cross Platform Application
   language: en
-  tag-card: game
+  tag-card: mobileApp
 ---
 

@@ -16,6 +16,7 @@ const WebApp = ({ language }) => {
                 category_lead
                 category_title
                 language
+                tag_name
               }
             }
           }
@@ -39,6 +40,7 @@ const WebApp = ({ language }) => {
               title={item.category_title}
               lead={item.category_lead !== "1" ? item.category_lead : ""}
               language={language}
+              tag_name={item.tag_name}
             />
           ))}
         </div>
