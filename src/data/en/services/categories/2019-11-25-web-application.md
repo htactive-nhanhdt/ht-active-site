@@ -6,5 +6,6 @@ service-category:
   category-lead: '1'
   category-title: WEB APPLICATION
   language: en
+  tag-name: web
 ---
 
