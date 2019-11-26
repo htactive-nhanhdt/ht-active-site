@@ -72,7 +72,7 @@ const Footer = ({footer}) => {
                       </li>
                       <li>
                         <i className="fa fa-envelope-o pr-10"></i>
-                        <a class = "link" href="mailto:recruit@htactive.com">
+                        <a className = "link" href="mailto:recruit@htactive.com">
                           recruit@htactive.com
                         </a>
                       </li>

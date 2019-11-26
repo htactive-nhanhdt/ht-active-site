@@ -288,7 +288,7 @@ collections:
 
   - name: "banner-service-vn"
     label: "Services- Tiếng Việt"
-    folder: "src/data/vi/services"    
+    folder: "src/data/vi/services/banner"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     language: "vi"
@@ -314,7 +314,7 @@ collections:
       preview: false
     fields:
      - { label: "Tiêu đề thể loại ", name: "title", widget: "string" }
-     - { label: "Publish Date", name: "date-vn", widget: "datetime" }    
+     - { label: "Publish Date", name: "date", widget: "datetime" }    
      - name: "service-category"
        label: "Loại dịch vụ"
        widget: "object"
@@ -345,7 +345,7 @@ collections:
 # Services page in English
   - name: "banner-service-en"
     label: "Services- English"
-    folder: "src/data/en/services"    
+    folder: "src/data/en/services/banner"    
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     language: "en"
@@ -358,6 +358,7 @@ collections:
        label: "banner-services"
        widget: "object"
        fields: 
+          - { label: "language", name: "language", widget: "string", default: "en" }    
           - { label: "Background Image",name: "banner-img",widget: "image"}
           - { label: "Banner tiltle", name: "banner-title", widget: "string" } 
           - { label: "Banner lead", name: "banner-lead", widget: "string" }    
@@ -370,12 +371,14 @@ collections:
     editor:
       preview: false
     fields:
+     - { label: "language", name: "language", widget: "string", default: "en" }    
      - { label: "Category title", name: "title", widget: "string" }
      - { label: "Publish Date", name: "date", widget: "datetime" }    
      - name: "service-category"
        label: "Category title"
        widget: "object"
        fields:          
+          - { label: "language", name: "language", widget: "string", default: "en" }    
           - { label: "Category title", name: "category-title", widget: "string" } 
           - { label: "Category lead", name: "category-lead", widget: "string" }    
                   
@@ -388,12 +391,14 @@ collections:
     editor:
        preview: false
     fields:
+      - { label: "language", name: "language", widget: "string", default: "en" }    
       - { label: "Card title ", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - name: "card-services"
         label: "card-services"
         widget: "object"
         fields: 
+          - { label: "language", name: "language", widget: "string", default: "en" }    
           - { label: "Card image",name: "card-img",widget: "image"}
           - { label: " Card title", name: "card-title", widget: "string" } 
           - { label: "Card description", name: "card-lead", widget: "string" }    

@@ -1,7 +1,8 @@
 import React, { useState } from "react"
+import { connect } from "react-redux";
+import {Link} from "gatsby"
 
-const HeaderTop = () => {
-  const [language, setLanguage] = useState("English")
+const HeaderTop = ({language, changeActive}) => { 
   const [openDropdown, setOpenDropdown] = useState(false)
   const [openToggle, setOpenToggle] = useState(false)
 
@@ -123,30 +124,30 @@ const HeaderTop = () => {
                     onClick={() => setOpenDropdown(!openDropdown)}
                   >
                     <span className="fa fa-globe"></span>
-                    <span className="text">{language}</span>
+                    <span className="text">{language==="en"?"English":"Tiếng Việt"}</span>
                   </button>
 
                   {openDropdown && (
                     <ul className="dropdown-menu dropdown-menu-right dropdown-animation">
                       <li
                         onClick={() => {
-                          setLanguage("English")
+                          changeActive("en")
                           setOpenDropdown(false)
                         }}
                       >
-                        <a className="btn-link" href="/">
+                        <Link className="btn-link" href="/">
                           English
-                        </a>
+                        </Link>
                       </li>
                       <li
                         onClick={() => {
-                          setLanguage("Tiếng Việt")
+                          changeActive("vi")
                           setOpenDropdown(false)
                         }}
                       >
-                        <a className="btn-link" href="/">
+                        <Link className="btn-link" href="/">
                           Tiếng Việt
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   )}
@@ -159,4 +160,13 @@ const HeaderTop = () => {
     </div>
   )
 }
-export default HeaderTop
+
+const mapStateToProps = ({ language }) => {
+  return { language }
+}
+const mapDispatchToProps = dispatch => {
+  return {
+    changeActive: value => dispatch({ type: `CHANGE_LANGUAGE`, language: value }),
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderTop)
