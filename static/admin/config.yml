@@ -468,10 +468,11 @@ collections:
                - name: "slider-img"
                  label: "Ảnh của Slider"
                  widget: "image"
+                 required: false
                  media_library:
                    config:
                      multiple: false
-               - { label: "Video",name: "video",widget: "file" ,require: false} 
+               - { label: "Video",name: "video",widget: "file" ,required: false} 
                - name: 'product-detail'   
                  label: "Chi tiết sản phẩm"
                  widget: "object"
@@ -480,32 +481,32 @@ collections:
                       label: "Chi tiết 1"
                       widget: "object"
                       fields:
-                         - { label: "Tên chi tiết",name: "name-1",widget: "string" ,require: false} 
-                         - { label: "Nội dung",name: "content-1",widget: "string" ,require: false} 
+                         - { label: "Tên chi tiết",name: "name-1",widget: "string" ,required: false} 
+                         - { label: "Nội dung",name: "content-1",widget: "string" ,required: false} 
                     - name: "product-detail-2"
                       label: "Chi tiết 2"
                       widget: "object"
                       fields:
-                         - { label: "Tên chi tiết",name: "name-2",widget: "string" ,require: false} 
-                         - { label: "Nội dung",name: "content-2",widget: "string" ,require: false} 
+                         - { label: "Tên chi tiết",name: "name-2",widget: "string" ,required: false} 
+                         - { label: "Nội dung",name: "content-2",widget: "string" ,required: false} 
                     - name: "product-detail-3"
                       label: "Chi tiết 3"
                       widget: "object"
                       fields:
-                         - { label: "Tên chi tiết",name: "name-3",widget: "string" ,require: false} 
-                         - { label: "Nội dung",name: "content-3",widget: "string" ,require: false}
+                         - { label: "Tên chi tiết",name: "name-3",widget: "string" ,required: false} 
+                         - { label: "Nội dung",name: "content-3",widget: "string" ,required: false}
                     - name: "product-detail-4"
                       label: "Chi tiết 4"
                       widget: "object"
                       fields:
-                         - { label: "Tên chi tiết",name: "name-4",widget: "string" ,require: false} 
-                         - { label: "Nội dung",name: "content-4",widget: "string" ,require: false}
+                         - { label: "Tên chi tiết",name: "name-4",widget: "string" ,required: false} 
+                         - { label: "Nội dung",name: "content-4",widget: "string" ,required: false}
                     - name: "product-detail-5"
                       label: "Chi tiết 5"
                       widget: "object"
                       fields:
-                         - { label: "Tên chi tiết",name: "name-5",widget: "string" ,require: false} 
-                         - { label: "Nội dung",name: "content-5",widget: "string" ,require: false}
+                         - { label: "Tên chi tiết",name: "name-5",widget: "string" ,required: false} 
+                         - { label: "Nội dung",name: "content-5",widget: "string" ,required: false}
                
               
             
