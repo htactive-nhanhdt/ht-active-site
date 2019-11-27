@@ -44,7 +44,7 @@ card-portfolio:
         slider: /img/htactive-2.png
       - id: 3
         slider: /img/htactive-3.png
-  card-slug: /vi/product-detail/3/htactive
+  card-slug: /vi/product-detail/3/htactive/
   card-title: Site HT Active
   language: vn
   tag-card: web
