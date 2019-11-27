@@ -687,11 +687,11 @@ collections:
                 #Product detail
               - name: "product-detail"
                 label: "Chi tiết sản phẩm"
-                widget: "list"
+                widget: "object"
                 fields:
                   - name: "product-detail"
                     label: "Chi tiết"
-                    widget: "object"
+                    widget: "list"
                     fields:
                       - {
                           label: "ID",
@@ -717,128 +717,14 @@ collections:
                               required: false,
                             }
 
-                  # - name: "product-detail-2"
-                  #   label: "Chi tiết"
-                  #   widget: "object"
-                  #   fields:
-                  #     - {
-                  #         label: "ID",
-                  #         name: "detail-id",
-                  #         widget: "number",
-                  #         required: false,
-                  #       }
-                  #     - {
-                  #         label: "Tên chi tiết",
-                  #         name: "name",
-                  #         widget: "string",
-                  #         required: false,
-                  #       }
-                  #     - label: "Nội dung"
-                  #       name: "content-list"
-                  #       required: false
-                  #       widget: "list"
-                  #       fields:
-                  #         - {
-                  #             label: "Nội dung",
-                  #             name: "content",
-                  #             widget: "string",
-                  #             required: false,
-                  #           }
-                  # - name: "product-detail-3"
-                  #   label: "Chi tiết"
-                  #   widget: "object"
-                  #   fields:
-                  #     - {
-                  #         label: "ID",
-                  #         name: "detail-id",
-                  #         widget: "number",
-                  #         required: false,
-                  #       }
-                  #     - {
-                  #         label: "Tên chi tiết",
-                  #         name: "name",
-                  #         widget: "string",
-                  #         required: false,
-                  #       }
-                  #     - label: "Nội dung"
-                  #       name: "content-list"
-                  #       required: false
-                  #       widget: "list"
-                  #       fields:
-                  #         - {
-                  #             label: "Nội dung",
-                  #             name: "content",
-                  #             widget: "string",
-                  #             required: false,
-                  #           }
-                  # - name: "product-detail-4"
-                  #   label: "Chi tiết"
-                  #   widget: "object"
-                  #   fields:
-                  #     - {
-                  #         label: "ID",
-                  #         name: "detail-id",
-                  #         widget: "number",
-                  #         required: false,
-                  #       }
-                  #     - {
-                  #         label: "Tên chi tiết",
-                  #         name: "name",
-                  #         widget: "string",
-                  #         required: false,
-                  #       }
-                  #     - label: "Nội dung"
-                  #       name: "content-list"
-                  #       required: false
-                  #       widget: "list"
-                  #       fields:
-                  #         - {
-                  #             label: "Nội dung",
-                  #             name: "content",
-                  #             widget: "string",
-                  #             required: false,
-                  #           }
-                  # - name: "product-detail-5"
-                  #   label: "Chi tiết"
-                  #   widget: "object"
-                  #   fields:
-                  #     - {
-                  #         label: "ID",
-                  #         name: "detail-id",
-                  #         widget: "number",
-                  #         required: false,
-                  #       }
-                  #     - {
-                  #         label: "Tên chi tiết",
-                  #         name: "name",
-                  #         widget: "string",
-                  #         required: false,
-                  #       }
-                  #     - label: "Nội dung"
-                  #       name: "content-list"
-                  #       required: false
-                  #       widget: "list"
-                  #       fields:
-                  #         - {
-                  #             label: "Nội dung",
-                  #             name: "content",
-                  #             widget: "string",
-                  #             required: false,
-                  #           }
                 #Product Description
               - name: "product-description"
                 label: "Công nghệ"
-                widget: "list"
-                fields:
-                  - {
-                      label: "Lời dẫn",
-                      name: "lead-desc",
-                      widget: "string",
-                      default: "Công nghệ sử dụng trong hệ thống",
-                    }
+                widget: "object"
+                fields:                 
                   - name: "product-desc"
                     label: "desc"
-                    widget: "object"
+                    widget: "list"
                     fields:
                       - {
                           label: "ID",
@@ -862,11 +748,11 @@ collections:
                         #Nhận xét (only have in vietnamese)
               - name: "product-comment"
                 label: "Nhận xét"
-                widget: "list"
+                widget: "object"
                 fields:
                   - name: "product-comment"
                     label: "Comment"
-                    widget: "object"
+                    widget: "list"
                     fields:
                       - {
                           label: "ID",
