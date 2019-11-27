@@ -648,7 +648,7 @@ collections:
                 }
                 #Product detail
               - name: "product-detail"
-                label: "Chi tiết sản phẩm"
+                label: "Mô tả sản phẩm"
                 widget: "object"
                 fields:
                   - name: "product-detail"
