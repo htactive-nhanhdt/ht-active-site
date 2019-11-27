@@ -601,8 +601,10 @@ collections:
         label: "card-portfolio"
         widget: "object"
         fields:
+          - { label: "ID", name: "card-id", widget: "number" }
           - { label: "Ảnh của card", name: "card-img", widget: "image" }
           - { label: " Tiêu đề Card", name: "card-title", widget: "string" }
+          - { label: " Đường dẫn card(slug)", name: "card-slug", widget: "string" }
           - { label: "Mô tả card", name: "card-lead", widget: "string" }
           - { label: "Thể loại card", name: "tag-card", widget: "string" }
           - {
@@ -611,7 +613,7 @@ collections:
               widget: "string",
               default: "vn",
             }
-          - name: "card page"
+          - name: "card-page"
             label: "Trang thẻ"
             widget: "object"
             fields:
