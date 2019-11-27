@@ -701,10 +701,10 @@ collections:
                           widget: "string",
                           required: false,                          
                         }
-                      -   label: "Nội dung",
-                          name: "content-list",
+                      -   name: "content-list"
+                          label: "Nội dung"                          
                           required: false
-                          widget: "list",                         
+                          widget: "list"                      
                           fields: 
                             - {
                                 label: "Nội dung",
@@ -729,10 +729,10 @@ collections:
                           widget: "string",
                           required: false,                          
                         }
-                      -   label: "Nội dung",
-                          name: "content-list",
+                      -   label: "Nội dung"
+                          name: "content-list"
                           required: false
-                          widget: "list",                         
+                          widget: "list"                     
                           fields: 
                             - {
                                 label: "Nội dung",
@@ -756,10 +756,10 @@ collections:
                           widget: "string",
                           required: false,                          
                         }
-                       -  label: "Nội dung",
-                          name: "content-list",
+                       -  label: "Nội dung"
+                          name: "content-list"
                           required: false
-                          widget: "list",                         
+                          widget: "list"                 
                           fields: 
                             - {
                                 label: "Nội dung",
@@ -783,10 +783,10 @@ collections:
                           widget: "string",
                           required: false,                          
                         }
-                      -   label: "Nội dung",
-                          name: "content-list",
+                      -   label: "Nội dung"
+                          name: "content-list"
                           required: false
-                          widget: "list",                         
+                          widget: "list"                   
                           fields: 
                             - {
                                 label: "Nội dung",
@@ -810,10 +810,10 @@ collections:
                           widget: "string",
                           required: false,                          
                         }
-                       -  label: "Nội dung",
-                          name: "content-list",
+                       -  label: "Nội dung"
+                          name: "content-list"
                           required: false
-                          widget: "list",                         
+                          widget: "list"                    
                           fields: 
                             - {
                                 label: "Nội dung",
