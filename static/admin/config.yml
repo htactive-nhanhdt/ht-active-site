@@ -862,9 +862,9 @@ collections:
                         #Nhận xét (only have in vietnamese)
               - name: "product-comment"
                 label: "Nhận xét"
-                widget: "object"
+                widget: "list"
                 fields:
-                  - name: "product-comment-1"
+                  - name: "product-comment"
                     label: "Comment"
                     widget: "object"
                     fields:
@@ -892,87 +892,4 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-comment-2"
-                    label: "Comment"
-                    widget: "object"
-                    fields:
-                      - {
-                          label: "ID",
-                          name: "comment-id",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Tiêu đề",
-                          name: "title",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Nội dung",
-                          name: "comment-content",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Ngày tháng",
-                          name: "comment-date",
-                          widget: "string",
-                          required: false,
-                        }
-                  - name: "product-comment-3"
-                    label: "Comment"
-                    widget: "object"
-                    fields:
-                      - {
-                          label: "ID",
-                          name: "comment-id",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Tiêu đề",
-                          name: "title",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Nội dung",
-                          name: "comment-content",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Ngày tháng",
-                          name: "comment-date",
-                          widget: "string",
-                          required: false,
-                        }
-                  - name: "product-comment-4"
-                    label: "Comment"
-                    widget: "object"
-                    fields:
-                      - {
-                          label: "ID",
-                          name: "comment-id",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Tiêu đề",
-                          name: "title",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Nội dung",
-                          name: "comment-content",
-                          widget: "string",
-                          required: false,
-                        }
-                      - {
-                          label: "Ngày tháng",
-                          name: "comment-date",
-                          widget: "string",
-                          required: false,
-                        }
+                 
