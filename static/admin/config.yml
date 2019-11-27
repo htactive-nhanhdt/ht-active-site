@@ -637,8 +637,7 @@ collections:
                       name: "slider",
                       widget: "image",
                       required: false,
-                    }
-                  
+                    }                 
 
               - {
                   label: "Video",
@@ -740,4 +739,404 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                 
+                      
+                 #Portfolio page in Vietnamese
+    - name: "banner-portfolio-vn"
+      label: "Portfolio- Tiếng Việt"
+      folder: "src/data/vi/portfolio/banner"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: false
+      fields:
+        - { label: "Tiêu đề Trang", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - name: "banner-portfolio"
+          label: "banner-portfolio"
+          widget: "object"
+          fields:
+            - { label: "Ảnh nền Banner", name: "banner-img", widget: "image" }
+            - { label: " Tiêu đề banner", name: "banner-title", widget: "string" }
+            - { label: " Lời dẫn banner", name: "banner-lead", widget: "string" }
+            - {
+                label: "Ngôn ngữ",
+                name: "language",
+                widget: "string",
+                default: "vn",
+              }
+    - name: "Portfolio-categories-vn"
+      label: "Portfolio-Thể loại- Tiếng Việt"
+      folder: "src/data/vi/portfolio/categories"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: false
+      fields:
+        - { label: "Tiêu đề thể loại ", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - name: "portfolio-category"
+          label: "Portfolio: Thể loại "
+          widget: "object"
+          fields:
+            - { label: "ID", name: "id", widget: "number" }
+            - {
+                label: "Tiêu đề Thể loại",
+                name: "category-title",
+                widget: "string",
+              }
+            - { label: "Tên đuôi", name: "tag-name", widget: "string" }
+            - {
+                label: "Ngôn ngữ",
+                name: "language",
+                widget: "string",
+                default: "vn",
+              }
+
+    - name: "Portfolio-card-vn"
+      label: "Portfolio-Thẻ- Tiếng Việt"
+      folder: "src/data/vi/portfolio/card"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: false
+      fields:
+        - { label: "Tiêu đề thẻ ", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - name: "card-portfolio"
+          label: "card-portfolio"
+          widget: "object"
+          fields:
+            - { label: "ID", name: "cardId", widget: "number" }
+            - { label: "Ảnh của card", name: "card-img", widget: "image" }
+            - { label: " Tiêu đề Card", name: "card-title", widget: "string" }
+            - {
+                label: " Đường dẫn card(slug)",
+                name: "card-slug",
+                widget: "string",
+              }
+            - { label: "Mô tả card", name: "card-lead", widget: "string" }
+            - { label: "Thể loại card", name: "tag-card", widget: "string" }
+            - {
+                label: "Ngôn ngữ",
+                name: "language",
+                widget: "string",
+                default: "vn",
+              }
+            - name: "card-page"
+              label: "Trang thẻ"
+              widget: "object"
+              fields:
+                - name: "slider-img"
+                  label: "Ảnh của Slider"
+                  widget: "list"
+                  required: false                
+                  fields:
+                    - {
+                        label: "ID",
+                        name: "id",
+                        widget: "number",
+                        required: false,
+                      }
+                    - {
+                        label: "Slider",
+                        name: "slider",
+                        widget: "image",
+                        required: false,
+                      }                 
+
+                - {
+                    label: "Video",
+                    name: "video-url",
+                    widget: "string",
+                    required: false,
+                  }
+                  #Product detail
+                - name: "product-detail"
+                  label: "Mô tả sản phẩm"
+                  widget: "object"
+                  fields:
+                    - name: "product-detail"
+                      label: "Chi tiết"
+                      widget: "list"
+                      fields:
+                        - {
+                            label: "ID",
+                            name: "detail-id",
+                            widget: "number",
+                            required: false,
+                          }
+                        - {
+                            label: "Tên chi tiết",
+                            name: "name",
+                            widget: "string",
+                            required: false,
+                          }
+                        - name: "content-list"
+                          label: "Nội dung"
+                          required: false
+                          widget: "list"
+                          fields:
+                            - {
+                                label: "Nội dung",
+                                name: "content",
+                                widget: "string",
+                                required: false,
+                              }
+
+                  #Product Description
+                - name: "product-description"
+                  label: "Công nghệ"
+                  widget: "object"
+                  fields:                 
+                    - name: "product-desc"
+                      label: "desc"
+                      widget: "list"
+                      fields:
+                        - {
+                            label: "ID",
+                            name: "desc-id",
+                            widget: "string",
+                            required: false,
+                          }
+                        - {
+                            label: "Tên công nghệ",
+                            name: "name",
+                            widget: "string",
+                            required: false,
+                          }
+                        - {
+                            label: "Nội dung",
+                            name: "tech-content",
+                            widget: "string",
+                            required: false,
+                          }
+                  
+                          #Nhận xét (only have in vietnamese)
+                - name: "product-comment"
+                  label: "Nhận xét"
+                  widget: "object"
+                  fields:
+                    - name: "product-comment"
+                      label: "Comment"
+                      widget: "list"
+                      fields:
+                        - {
+                            label: "ID",
+                            name: "comment-id",
+                            widget: "string",
+                            required: false,
+                          }
+                        - {
+                            label: "Tiêu đề",
+                            name: "title",
+                            widget: "string",
+                            required: false,
+                          }
+                        - {
+                            label: "Nội dung",
+                            name: "comment-content",
+                            widget: "string",
+                            required: false,
+                          }
+                        - {
+                            label: "Ngày tháng",
+                            name: "comment-date",
+                            widget: "string",
+                            required: false,
+                          }
+     - name: "banner-portfolio-vn"
+      label: "Portfolio- Tiếng Việt"
+      folder: "src/data/vi/portfolio/banner"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: false
+      fields:
+        - { label: "Tiêu đề Trang", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - name: "banner-portfolio"
+          label: "banner-portfolio"
+          widget: "object"
+          fields:
+            - { label: "Ảnh nền Banner", name: "banner-img", widget: "image" }
+            - { label: " Tiêu đề banner", name: "banner-title", widget: "string" }
+            - { label: " Lời dẫn banner", name: "banner-lead", widget: "string" }
+            - {
+                label: "Ngôn ngữ",
+                name: "language",
+                widget: "string",
+                default: "vn",
+              }
+                #Portfolion in English
+    - name: "banner-portfolio-en"
+      label: "Portfolio-Banner"
+      folder: "src/data/en/portfolio/banner"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: false
+      fields:
+        - { label: "Banner Portfolio", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - name: "banner-portfolio"
+          label: "banner-portfolio"
+          widget: "object"
+          fields:
+            - { label: "Banner-image", name: "banner-img", widget: "image" }
+            - { label: "Banner-title", name: "banner-title", widget: "string" }
+            - { label: "Banner lead", name: "banner-lead", widget: "string" }
+            - {
+                label: "Language",
+                name: "language",
+                widget: "string",
+                default: "en",
+              }
+    - name: "Portfolio-categories-en"
+      label: "Portfolio-Categories"
+      folder: "src/data/en/portfolio/categories"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: false
+      fields:
+        - { label: "Category title ", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - name: "portfolio-category"
+          label: "Portfolio Category "
+          widget: "object"
+          fields:
+            - { label: "ID", name: "id", widget: "number" }
+            - {
+                label: "Category Title",
+                name: "category-title",
+                widget: "string",
+              }
+            - { label: "Tag Name", name: "tag-name", widget: "string" }
+            - {
+                label: "Language",
+                name: "language",
+                widget: "string",
+                default: "en",
+              }
+
+    - name: "Portfolio-card-en"
+      label: "Portfolio-Card"
+      folder: "src/data/en/portfolio/card"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: false
+      fields:
+        - { label: "Title Card", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - name: "card-portfolio"
+          label: "card-portfolio"
+          widget: "object"
+          fields:
+            - { label: "ID", name: "cardId", widget: "number" }
+            - { label: "Card Image", name: "card-img", widget: "image" }
+            - { label: "Card Title", name: "card-title", widget: "string" }
+            - {
+                label: "Slug",
+                name: "card-slug",
+                widget: "string",
+              }
+            - { label: "Card lead", name: "card-lead", widget: "string" }
+            - { label: "Card tag name", name: "tag-card", widget: "string" }
+            - {
+                label: "Language",
+                name: "language",
+                widget: "string",
+                default: "en",
+              }
+            - name: "card-page"
+              label: "Page of Card Temple"
+              widget: "object"
+              fields:
+                - name: "slider-img"
+                  label: "Slider image"
+                  widget: "list"
+                  required: false                
+                  fields:
+                    - {
+                        label: "ID",
+                        name: "id",
+                        widget: "number",
+                        required: false,
+                      }
+                    - {
+                        label: "Slider",
+                        name: "slider",
+                        widget: "image",
+                        required: false,
+                      }                 
+
+                - {
+                    label: "Video",
+                    name: "video-url",
+                    widget: "string",
+                    required: false,
+                  }
+                  #Product detail
+                - name: "product-detail"
+                  label: "Product section"
+                  widget: "object"
+                  fields:
+                    - name: "product-detail"
+                      label: "Product detail"
+                      widget: "list"
+                      fields:
+                        - {
+                            label: "ID",
+                            name: "detail-id",
+                            widget: "number",
+                            required: false,
+                          }
+                        - {
+                            label: "Detail name",
+                            name: "name",
+                            widget: "string",
+                            required: false,
+                          }
+                        - name: "content-list"
+                          label: "Detail contents"
+                          required: false
+                          widget: "list"
+                          fields:
+                            - {
+                                label: "Content",
+                                name: "content",
+                                widget: "string",
+                                required: false,
+                              }
+
+                  #Product Description
+                - name: "product-description"
+                  label: "Descriptions"
+                  widget: "object"
+                  fields:                 
+                    - name: "product-desc"
+                      label: "desc"
+                      widget: "list"
+                      fields:
+                        - {
+                            label: "ID",
+                            name: "desc-id",
+                            widget: "string",
+                            required: false,
+                          }
+                        - {
+                            label: "Description Name",
+                            name: "name",
+                            widget: "string",
+                            required: false,
+                          }
+                        - {
+                            label: "Description content",
+                            name: "tech-content",
+                            widget: "string",
+                            required: false,
+                          }
+                  
+                      
+              
