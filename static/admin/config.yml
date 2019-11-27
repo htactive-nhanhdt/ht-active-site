@@ -392,7 +392,11 @@ collections:
         fields:
           - { label: "Ảnh nền Banner", name: "banner-img", widget: "image" }
           - { label: " Tiêu đề banner", name: "banner-title", widget: "string" }
-          - { label: " Lời dẫn banner", name: "banner-lead", widget: "string" }
+          - label: " Lời dẫn banner"
+            name: "banner-leads"
+            widget: "list" 
+            fields: 
+               - { label: "Nội dung", name: "banner-lead", widget: "string"}
           - {
               label: "Ngôn ngữ",
               name: "language",
@@ -480,7 +484,12 @@ collections:
             }
           - { label: "Background Image", name: "banner-img", widget: "image" }
           - { label: "Banner tiltle", name: "banner-title", widget: "string" }
-          - { label: "Banner lead", name: "banner-lead", widget: "string" }
+          - label: "Banner Leads"
+            name: "banner-leads"
+            widget: "list" 
+            fields: 
+               - { label: "Content", name: "banner-lead", widget: "string"}
+         
   - name: "service-categories"
     label: "Services-Category"
     folder: "src/data/en/services/categories"
@@ -552,7 +561,11 @@ collections:
         fields:
           - { label: "Ảnh nền Banner", name: "banner-img", widget: "image" }
           - { label: " Tiêu đề banner", name: "banner-title", widget: "string" }
-          - { label: " Lời dẫn banner", name: "banner-lead", widget: "string" }
+          - label: " Lời dẫn banner"
+            name: "banner-leads"
+            widget: "list" 
+            fields: 
+               - { label: "Nội dung", name: "banner-lead", widget: "string"}
           - {
               label: "Ngôn ngữ",
               name: "language",
@@ -756,7 +769,11 @@ collections:
         fields:
           - { label: "Banner-image", name: "banner-img", widget: "image" }
           - { label: "Banner-title", name: "banner-title", widget: "string" }
-          - { label: "Banner lead", name: "banner-lead", widget: "string" }
+          - label: "Banner Leads"
+            name: "banner-leads"
+            widget: "list" 
+            fields: 
+               - { label: "Content", name: "banner-lead", widget: "string"}
           - {
               label: "Language",
               name: "language",
