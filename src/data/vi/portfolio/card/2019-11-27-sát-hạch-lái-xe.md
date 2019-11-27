@@ -2,7 +2,7 @@
 title: Sát Hạch Lái Xe
 date: 2019-11-27T03:54:08.858Z
 card-portfolio:
-  card-id: 7
+  card-id: 6
   card-img: /img/sathach.jpg
   card-lead: >-
     Đầy đủ dữ liệu 450 câu hỏi cập nhập mới nhất của cục Khảo Thí, Tổng Cục
@@ -94,7 +94,7 @@ card-portfolio:
         slider: /img/sathach-6.jpg
       - id: 7
         slider: /img/sathach-7.jpg
-  card-slug: /vi/product-detail/7/sat-hach-lai-xe/
+  card-slug: /vi/product-detail/6/sat-hach-lai-xe/
   card-title: Sát Hạch Lái Xe
   language: vn
   tag-card: app
