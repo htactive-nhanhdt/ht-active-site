@@ -604,7 +604,11 @@ collections:
           - { label: "ID", name: "card-id", widget: "number" }
           - { label: "Ảnh của card", name: "card-img", widget: "image" }
           - { label: " Tiêu đề Card", name: "card-title", widget: "string" }
-          - { label: " Đường dẫn card(slug)", name: "card-slug", widget: "string" }
+          - {
+              label: " Đường dẫn card(slug)",
+              name: "card-slug",
+              widget: "string",
+            }
           - { label: "Mô tả card", name: "card-lead", widget: "string" }
           - { label: "Thể loại card", name: "tag-card", widget: "string" }
           - {
@@ -693,26 +697,26 @@ collections:
                           label: "ID",
                           name: "detail-id",
                           widget: "number",
-                          required: false,                          
+                          required: false,
                         }
                       - {
                           label: "Tên chi tiết",
                           name: "name",
                           widget: "string",
-                          required: false,                          
+                          required: false,
                         }
-                      -   name: "content-list"
-                          label: "Nội dung"                          
-                          required: false
-                          widget: "list"                      
-                          fields: 
-                            - {
-                                label: "Nội dung",
-                                name: "content",
-                                widget: "string",
-                                required: false,
-                              }
-                              
+                      - name: "content-list"
+                        label: "Nội dung"
+                        required: false
+                        widget: "list"
+                        fields:
+                          - {
+                              label: "Nội dung",
+                              name: "content",
+                              widget: "string",
+                              required: false,
+                            }
+
                   - name: "product-detail-2"
                     label: "Chi tiết"
                     widget: "object"
@@ -721,25 +725,25 @@ collections:
                           label: "ID",
                           name: "detail-id",
                           widget: "number",
-                          required: false,                          
+                          required: false,
                         }
                       - {
                           label: "Tên chi tiết",
                           name: "name",
                           widget: "string",
-                          required: false,                          
+                          required: false,
                         }
-                      -   label: "Nội dung"
-                          name: "content-list"
-                          required: false
-                          widget: "list"                     
-                          fields: 
-                            - {
-                                label: "Nội dung",
-                                name: "content",
-                                widget: "string",
-                                required: false,
-                              }
+                      - label: "Nội dung"
+                        name: "content-list"
+                        required: false
+                        widget: "list"
+                        fields:
+                          - {
+                              label: "Nội dung",
+                              name: "content",
+                              widget: "string",
+                              required: false,
+                            }
                   - name: "product-detail-3"
                     label: "Chi tiết"
                     widget: "object"
@@ -748,25 +752,25 @@ collections:
                           label: "ID",
                           name: "detail-id",
                           widget: "number",
-                          required: false,                          
+                          required: false,
                         }
                       - {
                           label: "Tên chi tiết",
                           name: "name",
                           widget: "string",
-                          required: false,                          
+                          required: false,
                         }
-                       -  label: "Nội dung"
-                          name: "content-list"
-                          required: false
-                          widget: "list"                 
-                          fields: 
-                            - {
-                                label: "Nội dung",
-                                name: "content",
-                                widget: "string",
-                                required: false,
-                              }
+                      - label: "Nội dung"
+                        name: "content-list"
+                        required: false
+                        widget: "list"
+                        fields:
+                          - {
+                              label: "Nội dung",
+                              name: "content",
+                              widget: "string",
+                              required: false,
+                            }
                   - name: "product-detail-4"
                     label: "Chi tiết"
                     widget: "object"
@@ -775,25 +779,25 @@ collections:
                           label: "ID",
                           name: "detail-id",
                           widget: "number",
-                          required: false,                          
+                          required: false,
                         }
                       - {
                           label: "Tên chi tiết",
                           name: "name",
                           widget: "string",
-                          required: false,                          
+                          required: false,
                         }
-                      -   label: "Nội dung"
-                          name: "content-list"
-                          required: false
-                          widget: "list"                   
-                          fields: 
-                            - {
-                                label: "Nội dung",
-                                name: "content",
-                                widget: "string",
-                                required: false,
-                              }
+                      - label: "Nội dung"
+                        name: "content-list"
+                        required: false
+                        widget: "list"
+                        fields:
+                          - {
+                              label: "Nội dung",
+                              name: "content",
+                              widget: "string",
+                              required: false,
+                            }
                   - name: "product-detail-5"
                     label: "Chi tiết"
                     widget: "object"
@@ -802,31 +806,36 @@ collections:
                           label: "ID",
                           name: "detail-id",
                           widget: "number",
-                          required: false,                          
+                          required: false,
                         }
                       - {
                           label: "Tên chi tiết",
                           name: "name",
                           widget: "string",
-                          required: false,                          
+                          required: false,
                         }
-                       -  label: "Nội dung"
-                          name: "content-list"
-                          required: false
-                          widget: "list"                    
-                          fields: 
-                            - {
-                                label: "Nội dung",
-                                name: "content",
-                                widget: "string",
-                                required: false,
-                              }
+                      - label: "Nội dung"
+                        name: "content-list"
+                        required: false
+                        widget: "list"
+                        fields:
+                          - {
+                              label: "Nội dung",
+                              name: "content",
+                              widget: "string",
+                              required: false,
+                            }
                 #Product Description
               - name: "product-description"
                 label: "Công nghệ( Nếu trong mục nội dung có nhiều nội dung con thì mỗi list item cách nhau bởi dấu +)"
                 widget: "object"
                 fields:
-                  - { label: "Lời dẫn", name: "lead-desc", widget: "string", default: "Công nghệ sử dụng trong hệ thống"}
+                  - {
+                      label: "Lời dẫn",
+                      name: "lead-desc",
+                      widget: "string",
+                      default: "Công nghệ sử dụng trong hệ thống",
+                    }
                   - name: "product-desc-1"
                     label: "desc"
                     widget: "object"
@@ -1007,7 +1016,7 @@ collections:
               - name: "product-comment"
                 label: "Nhận xét"
                 widget: "object"
-                fields:                 
+                fields:
                   - name: "product-comment-1"
                     label: "Comment"
                     widget: "object"
