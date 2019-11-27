@@ -461,5 +461,53 @@ collections:
           - { label: "Mô tả card", name: "card-lead", widget: "string" }    
           - { label: "Thể loại card", name: "tag-card", widget: "string" } 
           - { label: "Ngôn ngữ", name: "language", widget: "string", default: "vn" }  
+          - name: "card page"
+            label: "Trang thẻ"
+            widget: "object"
+            fields: 
+               - name: "slider-img"
+                 label: "Ảnh của Slider"
+                 widget: "image"
+                 media_library:
+                   config:
+                     multiple: true
+               - { label: "Video",name: "video",widget: "file" ,require: false} 
+               - name: 'product-detail'   
+                 label: "Chi tiết sản phẩm"
+                 widget: "object"
+                 fields: 
+                    - name: "product-detail-1"
+                      label: "Chi tiết 1"
+                      widget: "object"
+                      fields:
+                         - { label: "Tên chi tiết",name: "name-1",widget: "string" ,require: false} 
+                         - { label: "Nội dung",name: "content-1",widget: "string" ,require: false} 
+                    - name: "product-detail-2"
+                      label: "Chi tiết 2"
+                      widget: "object"
+                      fields:
+                         - { label: "Tên chi tiết",name: "name-2",widget: "string" ,require: false} 
+                         - { label: "Nội dung",name: "content-2",widget: "string" ,require: false} 
+                    - name: "product-detail-3"
+                      label: "Chi tiết 3"
+                      widget: "object"
+                      fields:
+                         - { label: "Tên chi tiết",name: "name-3",widget: "string" ,require: false} 
+                         - { label: "Nội dung",name: "content-3",widget: "string" ,require: false}
+                    - name: "product-detail-4"
+                      label: "Chi tiết 4"
+                      widget: "object"
+                      fields:
+                         - { label: "Tên chi tiết",name: "name-4",widget: "string" ,require: false} 
+                         - { label: "Nội dung",name: "content-4",widget: "string" ,require: false}
+                    - name: "product-detail-5"
+                      label: "Chi tiết 5"
+                      widget: "object"
+                      fields:
+                         - { label: "Tên chi tiết",name: "name-5",widget: "string" ,require: false} 
+                         - { label: "Nội dung",name: "content-5",widget: "string" ,require: false}
+               
+              
+            
       
 
