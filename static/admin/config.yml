@@ -286,7 +286,6 @@ collections:
               - { label: "Image",name: "tab-img",widget: "image"}  
 
 #Services page in Vietnamese
-
   - name: "banner-service-vn"
     label: "Services- Tiếng Việt"
     folder: "src/data/vi/services/banner"    
@@ -406,7 +405,6 @@ collections:
           - { label: "Card-tag", name: "tag-card", widget: "string" } 
              
 #Portfolio page in Vietnamese
-
   - name: "banner-portfolio-vn"
     label: "Portfolio- Tiếng Việt"
     folder: "src/data/vi/portfolio/banner"    
@@ -440,9 +438,8 @@ collections:
        widget: "object"
        fields:          
           - { label: "ID", name: "id", widget: "number" } 
-          - { label: " Tiêu đề Dịch vụ", name: "category-title", widget: "string" } 
-          - { label: " Lời dẫn Dịch vụ", name: "category-lead", widget: "string" }   
-          - { label: " Tên đuôi", name: "tag-name", widget: "string" }   
+          - { label: "Tiêu đề Thể loại", name: "category-title", widget: "string" } \ 
+          - { label: "Tên đuôi", name: "tag-name", widget: "string" }   
           - { label: "Ngôn ngữ", name: "language", widget: "string", default: "vn" }  
                   
   - name: "Portfolio-card-vn"
