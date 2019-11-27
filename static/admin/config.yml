@@ -642,8 +642,8 @@ collections:
 
               - {
                   label: "Video",
-                  name: "video",
-                  widget: "file",
+                  name: "video-url",
+                  widget: "string",
                   required: false,
                 }
                 #Product detail
