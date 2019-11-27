@@ -686,7 +686,7 @@ collections:
                 }
                 #Product detail
               - name: "product-detail"
-                label: "Chi tiết sản phẩm( Nếu trong mục nội dung(có nhiều nội dung con) thì mỗi list cách nhau bởi dấu +)"
+                label: "Chi tiết sản phẩm"
                 widget: "list"
                 fields:
                   - name: "product-detail"
@@ -827,7 +827,7 @@ collections:
                   #           }
                 #Product Description
               - name: "product-description"
-                label: "Công nghệ( Nếu trong mục nội dung có nhiều nội dung con thì mỗi list item cách nhau bởi dấu +)"
+                label: "Công nghệ"
                 widget: "list"
                 fields:
                   - {
