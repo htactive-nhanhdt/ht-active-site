@@ -685,7 +685,7 @@ collections:
                 label: "Chi tiết sản phẩm( Nếu trong mục nội dung(có nhiều nội dung con) thì mỗi list cách nhau bởi dấu +)"
                 widget: "object"
                 fields:
-                  - name: "product-detail"
+                  - name: "product-detail-1"
                     label: "Chi tiết"
                     widget: "object"
                     fields:
@@ -707,7 +707,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-detail"
+                  - name: "product-detail-2"
                     label: "Chi tiết"
                     widget: "object"
                     fields:
@@ -729,7 +729,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-detail"
+                  - name: "product-detail-3"
                     label: "Chi tiết"
                     widget: "object"
                     fields:
@@ -751,7 +751,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-detail"
+                  - name: "product-detail-4"
                     label: "Chi tiết"
                     widget: "object"
                     fields:
@@ -773,7 +773,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-detail"
+                  - name: "product-detail-5"
                     label: "Chi tiết"
                     widget: "object"
                     fields:
@@ -801,7 +801,7 @@ collections:
                 widget: "object"
                 fields:
                   - { label: "Lời dẫn", name: "lead-desc", widget: "string", default: "Công nghệ sử dụng trong hệ thống"}
-                  - name: "product-desc"
+                  - name: "product-desc-1"
                     label: "desc"
                     widget: "object"
                     fields:
@@ -823,7 +823,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-desc"
+                  - name: "product-desc-2"
                     label: "desc"
                     widget: "object"
                     fields:
@@ -845,7 +845,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-desc"
+                  - name: "product-desc-3"
                     label: "desc"
                     widget: "object"
                     fields:
@@ -867,7 +867,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-desc"
+                  - name: "product-desc-4"
                     label: "desc"
                     widget: "object"
                     fields:
@@ -889,7 +889,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-desc"
+                  - name: "product-desc-5"
                     label: "desc"
                     widget: "object"
                     fields:
@@ -911,7 +911,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-desc"
+                  - name: "product-desc-6"
                     label: "desc"
                     widget: "object"
                     fields:
@@ -933,7 +933,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-desc"
+                  - name: "product-desc-7"
                     label: "desc"
                     widget: "object"
                     fields:
@@ -955,7 +955,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-desc"
+                  - name: "product-desc-8"
                     label: "desc"
                     widget: "object"
                     fields:
@@ -982,7 +982,7 @@ collections:
                 label: "Nhận xét"
                 widget: "object"
                 fields:                 
-                  - name: "product-comment"
+                  - name: "product-comment-1"
                     label: "Comment"
                     widget: "object"
                     fields:
@@ -1010,7 +1010,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-comment"
+                  - name: "product-comment-2"
                     label: "Comment"
                     widget: "object"
                     fields:
@@ -1038,7 +1038,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-comment"
+                  - name: "product-comment-3"
                     label: "Comment"
                     widget: "object"
                     fields:
@@ -1066,7 +1066,7 @@ collections:
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-comment"
+                  - name: "product-comment-4"
                     label: "Comment"
                     widget: "object"
                     fields:
