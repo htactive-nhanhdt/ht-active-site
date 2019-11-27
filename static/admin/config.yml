@@ -438,7 +438,7 @@ collections:
        widget: "object"
        fields:          
           - { label: "ID", name: "id", widget: "number" } 
-          - { label: "Tiêu đề Thể loại", name: "category-title", widget: "string" } \ 
+          - { label: "Tiêu đề Thể loại", name: "category-title", widget: "string" } 
           - { label: "Tên đuôi", name: "tag-name", widget: "string" }   
           - { label: "Ngôn ngữ", name: "language", widget: "string", default: "vn" }  
                   
