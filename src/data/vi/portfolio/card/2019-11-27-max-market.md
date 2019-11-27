@@ -72,9 +72,12 @@ card-portfolio:
           detail-id: 3
           name: Điểm mạnh
     slider-img:
-      - slider-1: /img/max-market-1.jpg
-        slider-2: /img/max-market-2.jpg
-        slider-3: /img/max-market-3.jpg
+      - id: 1
+        slider: /img/max-market-1.jpg
+      - id: 2
+        slider: /img/max-market-2.jpg
+      - id: 3
+        slider: /img/max-market-3.jpg
   card-slug: /vi/product-detail/1/max-market/
   card-title: Max Market
   language: vn
