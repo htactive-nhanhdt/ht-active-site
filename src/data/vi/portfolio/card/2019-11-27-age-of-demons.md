@@ -2,6 +2,17 @@
 title: Age of Demons
 date: 2019-11-27T04:12:57.983Z
 card-portfolio:
+  body-product: |-
+    # 
+
+    asdas
+
+    11asd
+
+    1. ```
+       asdasd
+       ```
+       ![](/img/2.jpg)
   card-img: /img/demons.jpg
   card-lead: >-
     Chạm và giữ ngắm vào mục tiêu, thả ra để bắn. Bắn chính xác sẽ được cộng
