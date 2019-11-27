@@ -471,7 +471,7 @@ collections:
                  required: false
                  media_library:
                    config:
-                     multiple: false
+                     multiple: true
                - { label: "Video",name: "video",widget: "file" ,required: false} 
                - name: 'product-detail'   
                  label: "Chi tiết sản phẩm"
