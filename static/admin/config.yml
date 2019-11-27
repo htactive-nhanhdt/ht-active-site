@@ -470,7 +470,7 @@ collections:
                  widget: "image"
                  media_library:
                    config:
-                     multiple: true
+                     multiple: false
                - { label: "Video",name: "video",widget: "file" ,require: false} 
                - name: 'product-detail'   
                  label: "Chi tiết sản phẩm"
