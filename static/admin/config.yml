@@ -680,87 +680,417 @@ collections:
                   widget: "file",
                   required: false,
                 }
+                #Product detail
               - name: "product-detail"
                 label: "Chi tiết sản phẩm( Nếu trong mục nội dung(có nhiều nội dung con) thì mỗi list cách nhau bởi dấu +)"
                 widget: "object"
                 fields:
-                  - name: "product-detail-1"
-                    label: "Chi tiết 1"
+                  - name: "product-detail"
+                    label: "Chi tiết"
                     widget: "object"
                     fields:
                       - {
+                          label: "ID",
+                          name: "detail-id",
+                          widget: "number",
+                          required: false,                          
+                        }
+                      - {
                           label: "Tên chi tiết",
-                          name: "name-1",
+                          name: "name",
+                          widget: "string",
+                          required: false,                          
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "content",
+                          widget: "string",
+                          required: false,
+                        }
+                  - name: "product-detail"
+                    label: "Chi tiết"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "detail-id",
+                          widget: "number",
+                          required: false,                          
+                        }
+                      - {
+                          label: "Tên chi tiết",
+                          name: "name",
+                          widget: "string",
+                          required: false,                          
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "content",
+                          widget: "string",
+                          required: false,
+                        }
+                  - name: "product-detail"
+                    label: "Chi tiết"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "detail-id",
+                          widget: "number",
+                          required: false,                          
+                        }
+                      - {
+                          label: "Tên chi tiết",
+                          name: "name",
+                          widget: "string",
+                          required: false,                          
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "content",
+                          widget: "string",
+                          required: false,
+                        }
+                  - name: "product-detail"
+                    label: "Chi tiết"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "detail-id",
+                          widget: "number",
+                          required: false,                          
+                        }
+                      - {
+                          label: "Tên chi tiết",
+                          name: "name",
+                          widget: "string",
+                          required: false,                          
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "content",
+                          widget: "string",
+                          required: false,
+                        }
+                  - name: "product-detail"
+                    label: "Chi tiết"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "detail-id",
+                          widget: "number",
+                          required: false,                          
+                        }
+                      - {
+                          label: "Tên chi tiết",
+                          name: "name",
+                          widget: "string",
+                          required: false,                          
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "content",
+                          widget: "string",
+                          required: false,
+                        }
+                #Product Description
+              - name: "product-description"
+                label: "Công nghệ( Nếu trong mục nội dung có nhiều nội dung con thì mỗi list item cách nhau bởi dấu +)"
+                widget: "object"
+                fields:
+                  - { label: "Lời dẫn", name: "lead-desc", widget: "string", default: "Công nghệ sử dụng trong hệ thống"}
+                  - name: "product-desc"
+                    label: "desc"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "desc-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tên công nghệ",
+                          name: "name",
                           widget: "string",
                           required: false,
                         }
                       - {
                           label: "Nội dung",
-                          name: "content-1",
+                          name: "tech-content",
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-detail-2"
-                    label: "Chi tiết 2"
+                  - name: "product-desc"
+                    label: "desc"
                     widget: "object"
                     fields:
                       - {
-                          label: "Tên chi tiết",
-                          name: "name-2",
+                          label: "ID",
+                          name: "desc-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tên công nghệ",
+                          name: "name",
                           widget: "string",
                           required: false,
                         }
                       - {
                           label: "Nội dung",
-                          name: "content-2",
+                          name: "tech-content",
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-detail-3"
-                    label: "Chi tiết 3"
+                  - name: "product-desc"
+                    label: "desc"
                     widget: "object"
                     fields:
                       - {
-                          label: "Tên chi tiết",
-                          name: "name-3",
+                          label: "ID",
+                          name: "desc-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tên công nghệ",
+                          name: "name",
                           widget: "string",
                           required: false,
                         }
                       - {
                           label: "Nội dung",
-                          name: "content-3",
+                          name: "tech-content",
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-detail-4"
-                    label: "Chi tiết 4"
+                  - name: "product-desc"
+                    label: "desc"
                     widget: "object"
                     fields:
                       - {
-                          label: "Tên chi tiết",
-                          name: "name-4",
+                          label: "ID",
+                          name: "desc-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tên công nghệ",
+                          name: "name",
                           widget: "string",
                           required: false,
                         }
                       - {
                           label: "Nội dung",
-                          name: "content-4",
+                          name: "tech-content",
                           widget: "string",
                           required: false,
                         }
-                  - name: "product-detail-5"
-                    label: "Chi tiết 5"
+                  - name: "product-desc"
+                    label: "desc"
                     widget: "object"
                     fields:
                       - {
-                          label: "Tên chi tiết",
-                          name: "name-5",
+                          label: "ID",
+                          name: "desc-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tên công nghệ",
+                          name: "name",
                           widget: "string",
                           required: false,
                         }
                       - {
                           label: "Nội dung",
-                          name: "content-5",
+                          name: "tech-content",
+                          widget: "string",
+                          required: false,
+                        }
+                  - name: "product-desc"
+                    label: "desc"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "desc-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tên công nghệ",
+                          name: "name",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "tech-content",
+                          widget: "string",
+                          required: false,
+                        }
+                  - name: "product-desc"
+                    label: "desc"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "desc-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tên công nghệ",
+                          name: "name",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "tech-content",
+                          widget: "string",
+                          required: false,
+                        }
+                  - name: "product-desc"
+                    label: "desc"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "desc-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tên công nghệ",
+                          name: "name",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "tech-content",
+                          widget: "string",
+                          required: false,
+                        }
+                        #Nhận xét (only have in vietnamese)
+              - name: "product-comment"
+                label: "Nhận xét"
+                widget: "object"
+                fields:                 
+                  - name: "product-comment"
+                    label: "Comment"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "comment-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tiêu đề",
+                          name: "title",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "comment-content",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Ngày tháng",
+                          name: "comment-date",
+                          widget: "string",
+                          required: false,
+                        }
+                  - name: "product-comment"
+                    label: "Comment"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "comment-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tiêu đề",
+                          name: "title",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "comment-content",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Ngày tháng",
+                          name: "comment-date",
+                          widget: "string",
+                          required: false,
+                        }
+                  - name: "product-comment"
+                    label: "Comment"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "comment-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tiêu đề",
+                          name: "title",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "comment-content",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Ngày tháng",
+                          name: "comment-date",
+                          widget: "string",
+                          required: false,
+                        }
+                  - name: "product-comment"
+                    label: "Comment"
+                    widget: "object"
+                    fields:
+                      - {
+                          label: "ID",
+                          name: "comment-id",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Tiêu đề",
+                          name: "title",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Nội dung",
+                          name: "comment-content",
+                          widget: "string",
+                          required: false,
+                        }
+                      - {
+                          label: "Ngày tháng",
+                          name: "comment-date",
                           widget: "string",
                           required: false,
                         }
