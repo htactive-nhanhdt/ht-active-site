@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 const Banner = ({ language }) => {
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark(filter: { fields: { slug: { regex: "/banner/" } } }) {
+      allMarkdownRemark(filter: { fields: { slug: { regex: "/services/banner/" } } }) {
         edges {
           node {
             frontmatter {
