@@ -701,12 +701,18 @@ collections:
                           widget: "string",
                           required: false,                          
                         }
-                      - {
-                          label: "Nội dung",
-                          name: "content",
-                          widget: "string",
-                          required: false,
-                        }
+                      -   label: "Nội dung",
+                          name: "content-list",
+                          required: false
+                          widget: "list",                         
+                          fields: 
+                            - {
+                                label: "Nội dung",
+                                name: "content",
+                                widget: "string",
+                                required: false,
+                              }
+                              
                   - name: "product-detail-2"
                     label: "Chi tiết"
                     widget: "object"
@@ -723,12 +729,17 @@ collections:
                           widget: "string",
                           required: false,                          
                         }
-                      - {
-                          label: "Nội dung",
-                          name: "content",
-                          widget: "string",
-                          required: false,
-                        }
+                      -   label: "Nội dung",
+                          name: "content-list",
+                          required: false
+                          widget: "list",                         
+                          fields: 
+                            - {
+                                label: "Nội dung",
+                                name: "content",
+                                widget: "string",
+                                required: false,
+                              }
                   - name: "product-detail-3"
                     label: "Chi tiết"
                     widget: "object"
@@ -745,12 +756,17 @@ collections:
                           widget: "string",
                           required: false,                          
                         }
-                      - {
-                          label: "Nội dung",
-                          name: "content",
-                          widget: "string",
-                          required: false,
-                        }
+                       -  label: "Nội dung",
+                          name: "content-list",
+                          required: false
+                          widget: "list",                         
+                          fields: 
+                            - {
+                                label: "Nội dung",
+                                name: "content",
+                                widget: "string",
+                                required: false,
+                              }
                   - name: "product-detail-4"
                     label: "Chi tiết"
                     widget: "object"
@@ -767,12 +783,17 @@ collections:
                           widget: "string",
                           required: false,                          
                         }
-                      - {
-                          label: "Nội dung",
-                          name: "content",
-                          widget: "string",
-                          required: false,
-                        }
+                      -   label: "Nội dung",
+                          name: "content-list",
+                          required: false
+                          widget: "list",                         
+                          fields: 
+                            - {
+                                label: "Nội dung",
+                                name: "content",
+                                widget: "string",
+                                required: false,
+                              }
                   - name: "product-detail-5"
                     label: "Chi tiết"
                     widget: "object"
@@ -789,12 +810,17 @@ collections:
                           widget: "string",
                           required: false,                          
                         }
-                      - {
-                          label: "Nội dung",
-                          name: "content",
-                          widget: "string",
-                          required: false,
-                        }
+                       -  label: "Nội dung",
+                          name: "content-list",
+                          required: false
+                          widget: "list",                         
+                          fields: 
+                            - {
+                                label: "Nội dung",
+                                name: "content",
+                                widget: "string",
+                                required: false,
+                              }
                 #Product Description
               - name: "product-description"
                 label: "Công nghệ( Nếu trong mục nội dung có nhiều nội dung con thì mỗi list item cách nhau bởi dấu +)"
