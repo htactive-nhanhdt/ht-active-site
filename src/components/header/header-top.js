@@ -141,7 +141,7 @@ const HeaderTop = ({language, changeActive}) => {
                       </li>
                       <li
                         onClick={() => {
-                          changeActive("vi")
+                          changeActive("vn")
                           setOpenDropdown(false)
                         }}
                       >

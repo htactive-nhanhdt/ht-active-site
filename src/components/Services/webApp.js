@@ -26,7 +26,7 @@ const WebApp = ({ language }) => {
     }
   `)
   const dataFromQuery = data.allMarkdownRemark.edges
-  const keyword = language === "vi" ? null : language
+  const keyword = language === "vn" ? null : language
   const rawData = dataFromQuery.filter(
     item => item.node.frontmatter.service_category.language === keyword
   )

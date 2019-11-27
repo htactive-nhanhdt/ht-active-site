@@ -25,7 +25,7 @@ const ServiceSection = ({ language, title, lead, tag_name }) => {
     }
   `)
   const dataFromQuery = data.allMarkdownRemark.edges
-  const keyword = language === "vi" ? null : language
+  const keyword = language === "vn" ? null : language
   const rawData = dataFromQuery.filter(
     item => item.node.frontmatter.card_services.language === keyword  )  
   const listCardData = rawData.map(item => item.node.frontmatter.card_services)
