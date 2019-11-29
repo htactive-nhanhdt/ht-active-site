@@ -2,10 +2,7 @@
   .title {
     margin-top: 0;
   }
-  .service-card .title {
-    height: 70px;
-    min-height: 40px;
-  }
+  
   .header-fixed {
     display: flex;
     flex-direction: row !important;

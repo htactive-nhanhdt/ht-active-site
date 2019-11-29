@@ -10,16 +10,17 @@ const CardBlog = ({
   src,
   postday,
   postmonth,
+  postyear,
   cardTitle,
   cardContent,
   author,
-  commend,
-  tag,
   linkBlog,
   linkImg,
-  toggleOverlay
+  toggleOverlay,
 }) => {
   const [open, setOpen] = useState(false)
+  const month = ['','Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+  postmonth = postmonth.includes('0') ? postmonth.substring(1,2) : postmonth
   const [showModal, hideModal] = useModal(() => (
     <ReactModal isOpen>
       <div
@@ -31,7 +32,7 @@ const CardBlog = ({
         }}
       >
         <div>&nbsp;</div>
-        <img src={src}></img>
+        <img src={src} alt="img"></img>
       </div>
     </ReactModal>
   ))
@@ -82,7 +83,7 @@ const CardBlog = ({
           />
           <div className={"overlay "}>
             <div className="overlay-links">
-              <Link to={"/"}>
+              <Link to={linkBlog}>
                 <i className="fa fa-link" />
               </Link>
               <a href={"/"} className="popup-img-single" title="image title">
@@ -94,16 +95,17 @@ const CardBlog = ({
         <div className="blogpost-body">
           <div className="post-info">
             <span className="day">{postday}</span>
-            <span className="month">{postmonth}</span>
+            <span className="month">{month[postmonth]}</span>
+            <span className="year">{postyear}</span>
           </div>
           <div className="blogpost-content">
             <header>
               <h2 className="title">
-                <a href="blogPost" class="post-title">{cardTitle}</a>
+                <Link to ={linkBlog} className="post-title">{cardTitle}</Link>
               </h2>
               <div className="submitted">
                 <i className="fa fa-user pr-5" /> by{" "}
-                <a href="/blog">{author}</a>
+                <Link to="/blog">{author}</Link>
               </div>
             </header>
             <p>{cardContent}</p>
@@ -113,10 +115,10 @@ const CardBlog = ({
           <ul className="links pull-left hidden">
             <li>
               <i className="fa fa-comment-o pr-5" />{" "}
-              <a href="/blog">{commend}</a> |
+              <Link to="/blog">20  comments</Link> |
             </li>
             <li>
-              <i className="fa fa-tags pr-5" /> <a href="/blog">{tag}</a>
+              <i className="fa fa-tags pr-5" /> <a href="/blog">{'tag'}</a>
             </li>
           </ul>
           <Link className="pull-right link" to={linkBlog}>
@@ -132,7 +134,4 @@ const mapDispatchToProps = dispatch => {
     toggleOverlay: open => dispatch({ type: `TOGGLE_OVERLAY`, open: open }),
   }
 }
-export default connect(
-  null,
-  mapDispatchToProps
-)(CardBlog)
+export default connect(null, mapDispatchToProps)(CardBlog)

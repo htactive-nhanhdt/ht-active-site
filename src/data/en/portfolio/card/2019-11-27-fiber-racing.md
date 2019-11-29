@@ -42,7 +42,7 @@ card-portfolio:
         slider: /img/fiber_racing_04.png
       - id: 5
         slider: /img/fiber_racing_05.png
-    video-url: 'https://www.youtube.com/watch?v=rjURiI58sAI&feature=emb_logo'
+    video-url: 'https://www.youtube.com/embed/rjURiI58sAI'
   card-slug: /product-detail/9/fiber-racing/
   card-title: Fiber Racing
   cardId: 9

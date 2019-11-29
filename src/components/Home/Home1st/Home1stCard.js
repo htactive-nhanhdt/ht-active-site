@@ -2,7 +2,7 @@ import React from "react"
 import {Link } from "gatsby"
 
 
-const Home1stCard =({icon, title, lead, id, scrollY})=> {
+const Home1stCard =({icon, title, lead, id, scrollY,language})=> {
 return (
     <div className="col-sm-4">
     <div
@@ -14,7 +14,7 @@ return (
       <h2 className="card-title">{title}</h2>
       <p className="card-content">{lead}</p>
       <Link to="/services" className="btn-default btn">
-        Read More
+      {language === "en" ? "READ MORE" : "TÌM HIỂU THÊM"}
       </Link>
     </div>
   </div>

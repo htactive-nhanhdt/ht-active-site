@@ -1,11 +1,30 @@
 import React, { useState } from "react"
-import { connect } from "react-redux";
-import {Link} from "gatsby"
+import { connect } from "react-redux"
+import { Link } from "gatsby"
 
-const HeaderTop = ({language, changeActive}) => { 
+const HeaderTop = ({ language, changeLanguage, active, slug }) => {
   const [openDropdown, setOpenDropdown] = useState(false)
   const [openToggle, setOpenToggle] = useState(false)
-
+  let link = "/"
+  switch (active) {
+    case "1":
+      link = "/"
+      break
+    case "2":
+      link = "/services/"
+      break
+    case "3":
+      link = "/products/"
+      break
+    case "4":
+      link = "/blog/"
+      break
+    case "5":
+      link = "/contact/"
+      break
+    default:
+      break
+  } 
   return (
     <div className="header-top">
       <div className="container">
@@ -65,7 +84,7 @@ const HeaderTop = ({language, changeActive}) => {
                   >
                     <i className="fa fa-share-alt"></i>
                   </button>
-                  {openToggle && (
+                  {openDropdown ? (
                     <ul className="dropdown-menu dropdown-animation">
                       <li className="twitter">
                         <a href="https://twitter.com/hoangvhh">
@@ -108,7 +127,7 @@ const HeaderTop = ({language, changeActive}) => {
                         </a>
                       </li>
                     </ul>
-                  )}
+                  ) : null}
                 </div>
               </div>
             </div>
@@ -121,36 +140,40 @@ const HeaderTop = ({language, changeActive}) => {
                     type="button"
                     className="btn dropdown-toggle"
                     data-toggle="dropdown"
-                    onClick={() => setOpenDropdown(!openDropdown)}
+                    onClick={() => {
+                      setOpenDropdown(!openDropdown)
+                    }}
                   >
                     <span className="fa fa-globe"></span>
-                    <span className="text">{language==="en"?"English":"Tiếng Việt"}</span>
+                    <span className="text">
+                      {language === "en" ? "English" : "Tiếng Việt"}
+                    </span>
                   </button>
 
-                  {openDropdown && (
+                  {openDropdown ? (
                     <ul className="dropdown-menu dropdown-menu-right dropdown-animation">
                       <li
                         onClick={() => {
-                          changeActive("en")
+                          changeLanguage("en")
                           setOpenDropdown(false)
                         }}
                       >
-                        <Link className="btn-link" to="/">
+                        <Link className="btn-link" to={slug.split("/")[1]!=="product-detail"&&active!=="3"?`${link}`:slug}>
                           English
                         </Link>
                       </li>
                       <li
                         onClick={() => {
-                          changeActive("vn")
+                          changeLanguage("vn")
                           setOpenDropdown(false)
                         }}
                       >
-                        <Link className="btn-link" to="/">
+                        <Link className="btn-link" to={slug.split("/")[1]!=="product-detail"&&active!=="3"?`${link}`:`/vi${slug}`}>
                           Tiếng Việt
                         </Link>
                       </li>
                     </ul>
-                  )}
+                  ) : null}
                 </div>
               </div>
             </div>
@@ -160,13 +183,16 @@ const HeaderTop = ({language, changeActive}) => {
     </div>
   )
 }
-
-const mapStateToProps = ({ language }) => {
-  return { language }
+const mapStateToProps = ({ language, active, slug }) => {
+  return { language, active, slug }
 }
 const mapDispatchToProps = dispatch => {
   return {
-    changeActive: value => dispatch({ type: `CHANGE_LANGUAGE`, language: value }),
+    changeLanguage: language =>
+      dispatch({ type: `CHANGE_LANGUAGE`, language: language }),
+      changeSlug: slug =>
+      dispatch({ type: `CHANGE_SLUG`, slug: slug })
+      ,
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(HeaderTop)

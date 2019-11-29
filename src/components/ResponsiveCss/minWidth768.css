@@ -143,15 +143,15 @@
   }
   .subfooter .navbar-nav {
     float: none;
-    margin: 15px 0;
     text-align: center;
   }
   .subfooter .navbar-nav > li {
     float: none;
-    padding: 5px 0;
   }
   .subfooter .navbar-default .nav > li > a {
     padding: 0px 10px;
+    font-size:12px;
+    font-weight:500;
   }
   .box-style-3.right .icon-container {
     float: right;

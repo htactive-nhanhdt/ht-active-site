@@ -3,34 +3,14 @@ import TextCenter from "../TextCenter/TextCenter"
 
 import Home1stCard from "./Home1stCard"
 
-const Services = () => {
+const Home1st = ({ data, language }) => {
+  const dataUse = data.frontmatter[`home_1st_${language}`] || {}
+  const dataArr = Object.values(dataUse).map(item => item) || []
+  const dataBox = dataArr.filter((item, index) => index > 1)
   const [scrollY, setScrollY] = useState(0)
-  const data = [
-    {
-      id: 1,
-      icon: "fa fa-laptop",
-      title: "Web applications",
-      lead:
-        "Design and develop web applications, hosting service, domain, SEO.",
-    },
-    {
-      id: 2,
-      icon: "fa fa-mobile",
-      title: "Mobile Applications",
-      lead:
-        "Design and develop mobile applications, publish and app store optimization.",
-    },
-    {
-      id: 3,
-      icon: "fa fa-gamepad",
-      title: "Mobile Games",
-      lead:
-        " Design and develop mobile games, publish and app store optimization.",
-    },
-  ]
+  const icon = ["fa fa-laptop", "fa fa-mobile", "fa fa-gamepad"]
   const logit = () => {
-    if(window)
-    setScrollY(window.pageYOffset)
+    if (window) setScrollY(window.pageYOffset)
   }
   useEffect(() => {
     function watchScroll() {
@@ -50,16 +30,17 @@ const Services = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <TextCenter head="SERVICES" description="By using our services, you will get all of the great experience."/>
+              <TextCenter head={dataArr[1]} description={dataArr[0]} />
               <div className="row list-card">
-                {data.map((item, index) => (
+                {dataBox.map((item, index) => (
                   <Home1stCard
                     scrollY={scrollY}
-                    key={item.id}
-                    id={item.id}
-                    icon={item.icon}
-                    title={item.title}
-                    lead={item.lead}
+                    key={index}
+                    id={index+1}
+                    icon={icon[index]}
+                    language={language}
+                    title={item[`home_box_title_${language}_${index + 1}`]}
+                    lead={item[`home_box_desc_${language}_${index + 1}`]}
                   />
                 ))}
               </div>
@@ -71,4 +52,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Home1st

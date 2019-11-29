@@ -22,33 +22,32 @@ const StyleSwitcher = ({
   ]
   const colorSelect = colorList.map((item, index) => (
     <li
-    key={index}
+      key={index}
       className={`${item} ` + (item === color ? "selected" : "")}
       data-style={item}
       title={item}
       onClick={() => {
-        changeColor(item,mode)
+        changeColor(item, mode)
       }}
     />
   ))
   // style switch functions
-  const changeColor = (color,layout) => {
+  const changeColor = (color, layout) => {
     localStorage.setItem("color", color)
-     let body = document.getElementsByTagName("BODY")[0]
-     changeColorRedux(color)
+    let body = document.getElementsByTagName("BODY")[0]
+    changeColorRedux(color)
     if (layout) {
       if (body) body.className = `${layout} ${color}`
     } else {
       if (body) body.className = `${color}`
     }
     changeColorRedux(color)
-
   }
-  
+
   const changeLayout = layout => {
     localStorage.setItem("layout", layout)
     const body = document.getElementsByTagName("BODY")[0]
-    if(body) body.className = layout
+    if (body) body.className = layout
     if (color) {
       if (body) body.className = `${layout} ${color}`
     } else {

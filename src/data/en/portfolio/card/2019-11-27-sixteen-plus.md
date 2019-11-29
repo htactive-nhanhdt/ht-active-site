@@ -25,7 +25,7 @@ card-portfolio:
     slider-img:
       - id: 1
         slider: /img/sixteen-1.jpg
-    video-url: 'https://www.youtube.com/watch?v=MQzsfDEbgLg&feature=emb_logo'
+    video-url: 'https://www.youtube.com/embed/MQzsfDEbgLg?ecver=2'
   card-slug: /product-detail/7/sixteen-plus-dating/
   card-title: Sixteen Plus
   cardId: 7

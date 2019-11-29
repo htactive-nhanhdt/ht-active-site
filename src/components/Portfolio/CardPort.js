@@ -1,6 +1,11 @@
 import React from "react"
+import { Link } from "gatsby"
+import {connect} from "react-redux"
 
-const CardPort = ({ image, title, content, link }) => {
+const CardPort = ({ image, title, content, link, language, changeSlug}) => {
+  let slug= language==="vn"?`${link.slice(3,link.length)}`:`${link}`;
+
+  
   return (
     <div className="col-md-3 col-sm-6 isotope-item fWeb fade-in-bottom-1">
       <div className="image-box">
@@ -9,15 +14,25 @@ const CardPort = ({ image, title, content, link }) => {
         </div>
         <div className="image-box-body">
           <h3 className="title">
-            <a href={link}>{title}</a>
+            <Link to={link} onClick={() => changeSlug(slug)}>
+              {title}
+            </Link>
           </h3>
           <p className="cutline">{content}</p>
-          <a href={link} className="link">
+          <Link to={link} className="link" onClick={() => changeSlug(slug)}>
             <span>Read More</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
   )
 }
-export default CardPort
+const mapStateToProps = ({ language }) => {
+  return { language }
+}
+const mapDispatchToProps = dispatch => {
+  return {
+    changeSlug: value => dispatch({ type: `CHANGE_SLUG`, slug: value }),
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(CardPort)

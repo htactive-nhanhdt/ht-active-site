@@ -2,7 +2,7 @@
 title: Max Market
 date: 2019-11-27T03:48:03.016Z
 card-portfolio:
-  card-id: 1
+  cardId: 1
   card-img: /img/max-market.jpg
   card-lead: >-
     Max market là hệ thống trao đổi mua bán và rao vặt. Sau khi admin cấu hình

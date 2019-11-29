@@ -2,7 +2,7 @@
 title: Sat Hach Lai Xe
 date: 2019-11-27T03:54:08.858Z
 card-portfolio:
-  card-id: 6
+  cardId: 6
   card-img: /img/sathach.jpg
   card-lead: >-
     All 450 newest questions from Ministry of Transportation to help user pass driving examine. Useful tricks and experience to ...

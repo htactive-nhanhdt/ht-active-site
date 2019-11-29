@@ -2,7 +2,7 @@
 title: Dai Thang Nong
 date: 2019-11-27T03:51:24.099Z
 card-portfolio:
-  card-id: 4
+  cardId: 4
   card-img: /img/dtn.jpg
   card-lead: >-
     Dai Thang Nong's website, to provide agricultural products.

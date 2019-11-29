@@ -1,59 +1,71 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import BannerAnim from "rc-banner-anim"
 import QueueAnim from "rc-queue-anim"
-import Slide1 from "../../data/images/slider-1.jpg"
-import Slide2 from "../../data/images/slider-background.jpg"
-import Slide3 from "../../data/images/slider-3.jpg"
+
+
 import MacImg from "../../data/images/slider-2.png"
 import BannerLeft from "./bannerLeft"
 import ProgressBar from "./progressBar"
 
 const { Element } = BannerAnim
 const BgElement = Element.BgElement
-const Banner = () => {
+const Banner = ({ data, language, changeSlug }) => {
+  const dataUse = data.frontmatter[`slide_${language}`] || {}
+  const dataArr = Object.values(dataUse).map(item => item) || []
+  
+  const [scrollY, setScrollY] = useState(0)
+  const logit = () => {
+    setScrollY(window.pageYOffset)
+  }
+  useEffect(() => {    
+    function watchScroll() {
+      window.addEventListener("scroll", logit)
+    }
+    watchScroll()
+    return () => {
+      window.removeEventListener("scroll", logit)
+    }
+  }, [])
+
   const [showbar, setBar] = useState(true)
   const handleProgressBar = e => {
     if (e === "after") {
       setBar(true)
-    } else { 
+    } else {
       setBar(false)
     }
   }
 
-  const data = [
+  const data2 = [
     {
-      bg: `${Slide1}`,
-      title: "HT Active - Professional Software Solutions",
-      lead: "Provide Best Services+New Technology+Best Quality+Support 24/7",
-      more: "And much more ...",
+      bg: dataArr[6],
+      title: dataArr[0],
+      lead: dataArr[3][0],
       img: "",
     },
 
     {
-      bg: `${Slide2}`,
-      title: "We Provide All You Need",
-      lead: "Website Application+Windows Application+Mobile Application+Game",
-      more: "And more software solutions...",
+      bg: dataArr[7],
+      title: dataArr[1],
+      lead: dataArr[4][0],
       img: `${MacImg}`,
     },
     {
-      bg: `${Slide3}`,
-      title: "Satisfaction Is What You Need",
-      lead:
-        "Clean and unique design+After sale support+Cross-Browser/ Cross-Platform Compatible+Young and Brilliant Team",
-      more: "Dont miss out!",
+      bg: dataArr[8],
+      title: dataArr[2],
+      lead: dataArr[5][0],
       img: "",
     },
   ]
   return (
-    <div className="banner">
+    <div className={`banner ${scrollY>182?"solveBlink":""}`}>
       <BannerAnim
         autoPlay
         autoPlaySpeed={10000}
         autoPlayEffect={false}
         onChange={e => handleProgressBar(e)}
       >
-        {data.map((item, index) => (
+        {data2.map((item, index) => (
           <Element
             key={index}
             prefixCls="banner-user-elem"
@@ -75,17 +87,9 @@ const Banner = () => {
               name="QueueAnim"
               className={`col-sm-10 banner-left-wrapper`}
             >
-              {showbar && (
-                <BannerLeft
-                  title={item.title}
-                  lead={item.lead}
-                  more={item.more}
-                />
-              )}
+              {showbar && <BannerLeft title={item.title} lead={item.lead} />}
             </QueueAnim>
-            <div>
-              
-            </div>
+            <div></div>
             {item.img !== "" && (
               <img
                 src={`${item.img}`}
@@ -95,9 +99,14 @@ const Banner = () => {
             )}
           </Element>
         ))}
-      </BannerAnim >
+      </BannerAnim>
       {showbar && <ProgressBar />}
     </div>
   )
 }
+
 export default Banner
+
+
+
+

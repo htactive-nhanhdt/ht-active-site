@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react"
 
 const BannerLeft = props => {
-  const { title, lead, more } = props
-  const leads = lead.split("+")
+  const { title, lead } = props
+  const leadArr = lead.split("+")
+  const leads = leadArr.slice(0, 4)
+  const more = leadArr.slice(4, 5)
   const [fadeOut, setFadeOut] = useState(false)
   const timer = () => setFadeOut(true)
   useEffect(() => {
-    const id = setTimeout(timer,8500)
+    const id = setTimeout(timer, 8500)
     return () => clearTimeout(id)
   }, [fadeOut])
   return (

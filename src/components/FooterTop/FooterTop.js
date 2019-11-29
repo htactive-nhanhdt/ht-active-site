@@ -1,17 +1,52 @@
 import React, { useEffect } from "react"
+import {Link } from "gatsby"
 import "../FooterTop/FooterTop.css"
-// import OwlCarousel from 'react-owl-carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { useStaticQuery, graphql } from "gatsby"
 
-const FooterTop = () => {
-  const img1 = "http://htactive.com/assets/voc/images/client-1.png"
-  const img2 = "http://htactive.com/assets/voc/images/client-2.png"
-  const img3 = "http://htactive.com/assets/voc/images/client-3.png"
-  const img4 = "http://htactive.com/assets/voc/images/client-4.png"
-  const img5 = "http://htactive.com/assets/voc/images/client-5.png"
-  const img6 = "http://htactive.com/assets/voc/images/client-6.png"
-  const img7 = "http://htactive.com/assets/voc/images/client-7.png"
+const FooterTop = ({language}) => {  
+  const data = useStaticQuery(
+    graphql`
+      query {
+        carousel_en: markdownRemark(frontmatter: {carousel_en: { carousel_en_1: {ne: null}}}) {
+          frontmatter {
+            carousel_en {
+              carousel_en_1
+              carousel_en_2
+              carousel_en_3
+              carousel_en_4
+              carousel_en_5
+              carousel_en_6
+              carousel_en_7
+            }
+          }
+        }
+        carousel_vn: markdownRemark(frontmatter: {carousel_vn: {carousel_vn_1: {ne: null}}}) {
+          frontmatter {
+            carousel_vn {
+              carousel_vn_1
+              carousel_vn_2
+              carousel_vn_3
+              carousel_vn_4
+              carousel_vn_5
+              carousel_vn_6
+              carousel_vn_7
+            }
+          }
+        }
+      }
+    `
+  )
+  const carousel = data[`carousel_${language}`].frontmatter[`carousel_${language}`]
+  const carouselArr = Object.values(carousel).map(item => item) || []  
+  const carouselImg = [...carouselArr,carouselArr[2]].map((item, index) => (
+    <div key = {index} className="owl-item" style={{ width: "139px" }}>
+      <div className="client">
+        <Link to="/">
+          <img src={item} alt="footer-logo" />
+        </Link>
+      </div>
+    </div>
+  ))
   useEffect(() => {
     const element = document.getElementById("float-img")
     let count = 1
@@ -25,14 +60,11 @@ const FooterTop = () => {
     }, 5000)
   }, [])
 
-
   return (
-    //    <div></div>
     <div className="section text-muted footer-top clearfix">
       <div className="container">
         <div className="row ">
           <div className="col-xl-6 col-sm-12">
-        
             <div
               className="owl-carousel clients owl-theme"
               style={{ opacity: 1, display: "block" }}
@@ -49,76 +81,7 @@ const FooterTop = () => {
                     transform: "translate3d(0px, 0px, 0px)",
                   }}
                 >
-                  <div className="owl-item" style={{ width: "139px" }}>
-                    <div className="client">
-                      <a href="/">
-                        <img src={img1} alt="" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="owl-item" style={{ width: "139px" }}>
-                    <div className="client">
-                      <a href="/">
-                        <img src={img2} alt="" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="owl-item" style={{ width: "139px" }}>
-                    <div className="client">
-                      <a href="/">
-                        <img src={img3} alt="" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="owl-item" style={{ width: "139px" }}>
-                    <div className="client">
-                      <a href="/">
-                        <img src={img4} alt="" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="owl-item" style={{ width: "139px" }}>
-                    <div className="client">
-                      <a href="/">
-                        <img src={img5} alt="" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="owl-item" style={{ width: "139px" }}>
-                    <div className="client">
-                      <a href="/">
-                        <img src={img6} alt="" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="owl-item" style={{ width: "139px" }}>
-                    <div className="client">
-                      <a href="/">
-                        <img src={img7} alt="" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="owl-item" style={{ width: "139px" }}>
-                    <div className="client">
-                      <a href="/">
-                        <img src={img3} alt="" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="owl-item" style={{ width: "139px" }}>
-                    <div className="client">
-                      <a href="/">
-                        <img src={img2} alt="" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="owl-item" style={{ width: "139px" }}>
-                    <div className="client">
-                      <a href="/">
-                        <img src={img1} alt="" />
-                      </a>
-                    </div>
-                  </div>
+                 {carouselImg}
                 </div>
               </div>
             </div>

@@ -1,128 +1,91 @@
 import React, { useState } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import CardPort from "./CardPort"
 
-import Img1 from "../layoutCss/assets/voc/images/max-market.jpg"
+const PortfolioContent = ({ language, dataCategories }) => {
+  const [active, setActive] = useState("all")
 
-const PortfolioContent = () => {
-  const data = [
+  const data = useStaticQuery(graphql`
     {
-      image: Img1,
-      title: "Max Market",
-      content:
-        "Max Market is the best website to advertise, buy and sell goods. User can post their notice, and search for products",
-      link: "/subPortfolio",
-      tag: "web",
-    },
-    {
-      image: Img1,
-      title: "Max Market",
-      content:
-        "Max Market is the best website to advertise, buy and sell goods. User can post their notice, and search for products",
-      link: "/subPortfolio",
-      tag: "web",
-    },
-    {
-      image: Img1,
-      title: "Max Market",
-      content:
-        "Max Market is the best website to advertise, buy and sell goods. User can post their notice, and search for products",
-      link: "/subPortfolio",
-      tag: "mobile-app",
-    },
-    {
-      image: Img1,
-      title: "Max Market",
-      content:
-        "Max Market is the best website to advertise, buy and sell goods. User can post their notice, and search for products",
-      link: "product-detail/2/max-market",
-      tag: "web",
-    },
-    {
-      image: Img1,
-      title: "Max Market",
-      content:
-        "Max Market is the best website to advertise, buy and sell goods. User can post their notice, and search for products",
-      link: "/subPortfolio",
-      tag: "mobile-game",
-    },
-    {
-      image: Img1,
-      title: "Max Market",
-      content:
-        "Max Market is the best website to advertise, buy and sell goods. User can post their notice, and search for products",
-      link: "/subPortfolio",
-      tag: "mobile-app",
-    },
-  ]
-  const [products, setProducts] = useState(data)
-  const [active, setActive] = useState(1)
-  const handleFilter = value => {
-    setActive(value)
-    if (value === "all") {
-      setProducts(data)
-    } else {
-      let dataFilter = data.filter(item => item.tag === value)
-      setProducts(dataFilter)
+      allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/portfolio/card/" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              card_portfolio {
+                card_img
+                card_lead
+                card_slug
+                card_title
+                language
+                tag_card
+                cardId
+              }
+            }
+          }
+        }
+      }
     }
+  `)
+  const dataFromQuery = data.allMarkdownRemark.edges
+  const rawData = dataFromQuery.filter(
+    item => item.node.frontmatter.card_portfolio.language === language
+  )
+  const cardData = rawData.map(item=> item.node.frontmatter.card_portfolio).sort((a,b)=> a.cardId- b.cardId)
+  const filterData= active==="all"?cardData:cardData.filter(item=> item.tag_card===active)
 
-    return
-  }
+  const categories = dataCategories.map(
+    item => item.node.frontmatter.portfolio_category
+  )
+  
 
   return (
     <section className="main-container">
-      <div className="container"> 
+      <div className="container">
         <div className="row">
           {/* main start */}
           {/* ================ */}
           <div className="main col-md-12">
-          <div className="shield"></div>
+            <div className="shield"></div>
             <div className="filters">
               <ul className="nav nav-pills">
-                <li
-                  className={`${active === "all" ? "active" : " "}`}
-                  onClick={() => handleFilter("all")}
+                <li 
+                className={`${active === "all" ? "active" : " "}`}
+                onClick={()=> setActive("all")}                
                 >
                   <p>All</p>
                 </li>
-                <li
-                  className={`${active === "web" ? "active" : " "}`}
-                  onClick={() => handleFilter("web")}
-                >
-                  <p>Web</p>
-                </li>
-                <li
-                  className={`${active === "mobile-app" ? "active" : " "}`}
-                  onClick={() => handleFilter("mobile-app")}
-                >
-                  <p>Mobile Application</p>
-                </li>
-                <li
-                  className={`${active === "mobile-game" ? "active" : " "}`}
-                  onClick={() => handleFilter("mobile-game")}
-                >
-                  <p>Mobile Game</p>
-                </li>
+                {categories.map((item, index) => (
+                  <li
+                    key={index}
+                    className={`${(active === item.tag_name )? "active" : " "}`}
+                    onClick={()=> setActive(item.tag_name)}
+                  >
+                   <p>{item.category_title}</p> 
+                  </li>
+                ))}
               </ul>
             </div>
             {/* isotope filters end */}
             {/* portfolio items start */}
             <div
               className="image-boxes isotope-container row"
-              style={{
-                display: "block",
+              style={{               
                 position: "relative",
               }}
             >
-              {products.map((item, index) => (
+              {filterData.map((item, index) => (
                 <CardPort
                   key={index}
-                  title={item.title}
-                  image={item.image}
-                  content={item.content}
-                  link={item.link}
-                  tag={item.tag}
+                  title={item.card_title}
+                  image={item.card_img}
+                  content={item.card_lead}
+                  link={item.card_slug}
+                  tag={item.tag_card}
                 />
-              ))}
+                ))}
+             
             </div>
             {/* portfolio items end */}
           </div>

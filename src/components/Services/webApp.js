@@ -26,11 +26,9 @@ const WebApp = ({ language }) => {
     }
   `)
   const dataFromQuery = data.allMarkdownRemark.edges
-  const keyword = language === "vn" ? null : language
   const rawData = dataFromQuery.filter(
-    item => item.node.frontmatter.service_category.language === keyword
+    item => item.node.frontmatter.service_category.language === language
   )
-  console.log(keyword)
   const categories = rawData.map(item => item.node.frontmatter.service_category).sort((a,b)=>a.id-b.id)
   return (
     <section className="main-container" style={{ marginTop: "0px" }}>

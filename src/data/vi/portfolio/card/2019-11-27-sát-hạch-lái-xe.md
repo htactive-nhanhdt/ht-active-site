@@ -2,7 +2,7 @@
 title: Sát Hạch Lái Xe
 date: 2019-11-27T03:54:08.858Z
 card-portfolio:
-  card-id: 6
+  cardId: 6
   card-img: /img/sathach.jpg
   card-lead: >-
     Đầy đủ dữ liệu 450 câu hỏi cập nhập mới nhất của cục Khảo Thí, Tổng Cục
