@@ -607,7 +607,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
-    fields:
+    fields:      
       - { label: "Tiêu đề thẻ ", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - name: "card-portfolio"
@@ -651,7 +651,11 @@ collections:
                       widget: "image",
                       required: false,
                     }
-
+              - name: "footer-page"
+                label: "Footer"
+                widget: "list"
+                fields: 
+                  - {label: "Store", name: "store", widget: "string" }
               - {
                   label: "Video",
                   name: "video-url",
@@ -751,6 +755,10 @@ collections:
                           widget: "string",
                           required: false,
                         }
+
+
+
+
 
                 #Portfolion in English
   - name: "banner-portfolio-en"
