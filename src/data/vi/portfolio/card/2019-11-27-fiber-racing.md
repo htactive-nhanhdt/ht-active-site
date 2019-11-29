@@ -5,6 +5,10 @@ card-portfolio:
   card-img: /img/fiber_racing.jpg
   card-lead: Bạn sẽ tham gia vào một cuộc đua. Chạm màn hình để lượn và thả ra để đi.
   card-page:
+    footer-portfolio:
+      - store: Google Play
+      - store: App Store
+      - store: Window Phone Store
     product-comment:
       product-comment:
         - comment-content: >-
